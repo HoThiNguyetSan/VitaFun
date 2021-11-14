@@ -1,0 +1,48 @@
+*{  
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+/* -----------body--------- */
+.body::before {
+    display: block;
+    content: "";
+    margin-top: -1px;
+    height: 138px;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* :root{
+    --commonwidth:1150px ;
+    --collumn:6;
+    --commondirection:row;
+    --spacing:-2px;
+    --rong:1000px;
+} */
+.page{
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857;
+    color: rgb(34, 34, 34);
+    background-color: #f5f5f5;;            
+    justify-content: center;       
+    width: 100%;        
+}  
+.iframe-header{
+    position: fixed;
+}
+@media  screen and (max-width:768px) {
+
+}
+@media  screen and (max-width:376px) {
+    .body::before {        
+        height: 0px;      
+    }
+    .iframe-header{
+        position: relative;
+        height: 200px;
+        overflow: visible;
+    }
+}
