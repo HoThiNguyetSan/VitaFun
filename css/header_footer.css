@@ -1,0 +1,478 @@
+*{  
+    padding: 0px;
+    margin: 0px;
+}
+.page{
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857;
+    color: rgb(34, 34, 34);
+    background-color: #f5f5f5;            
+    justify-content: center;       
+    width: 100%;        
+}  
+a{
+    text-decoration: none;
+    color: black;
+}
+:root{
+    --commonwidth:1150px ;
+    --collumn:6;
+    --commondirection:row;
+    --spacing:-2px;
+    --rong:1000px;
+}
+
+/* -----tittle----- */
+.topbar{
+    height: 40px;
+    width: 100%;    
+    background-color: black;        
+    line-height: 40px;
+    font-size: 20px;
+    top: 0px;   
+    text-align: center;          
+}
+.topbar span{      
+    color: white;
+}
+
+/* -----header-------- */
+.header{
+    width: 100%;
+    position: fixed;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.header-container{   
+    background-color: white;    
+    padding-top: 10px;
+    margin-bottom: 20px;  
+}
+.header-main{
+    max-width: var(--commonwidth); 
+    margin: auto;
+    display: flex;    
+    flex-wrap: wrap;
+}
+.header_logo,.header_nav{
+    height: 100px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.header-cart-account>div{
+    height: 100px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+#icon-cart, #icon-account{
+    color: rgb(37, 37, 37);
+}
+.header_logo{    
+    width: 271px; 
+    padding-left: 5px;   
+}
+.header_logo img{
+    height: 80%;    
+}
+.header_nav-main{
+    width: 572px;
+    height: 30%;   
+    margin-bottom: 5px; 
+}
+.header_nav-main li{
+    width: 143px;
+    float: left;   
+    text-align: center; 
+    list-style-type: none;    
+}
+.header_nav-search{
+    clear: both;
+    text-align: center;
+}
+.header_nav-search input[type=text]{
+    width: 60%;
+    height: 30px;
+}
+.header_nav-search input[type=button]{
+    width: 80px;
+    height: 36px;
+    margin-left: -15px;
+    color: white;
+    background-color: #6BC15F;
+}
+.header-cart-account{
+    width: 179px;
+    margin: auto 30px auto auto;
+    display: flex;
+}
+.header-cart-account>div{
+    width: 50%;
+    text-align: center;    
+}
+.header-cart i{
+    font-size: 30px;
+    color: orangered;
+}
+.header-cart-account i{
+    font-size: 30px;
+    color: blue;
+}
+.home-header-menumini{
+    display: block;
+    clear: both;
+    float: left;
+    display: none;
+}
+.home-header-menumini li{
+    list-style-type: none;
+    background-color: white;
+}
+.home-header-menumini>ul>li{
+    color: blueviolet;
+    width: 120px;
+}
+.home-header-menumini .fas{
+    font-size: 40px;
+}
+.home-header-menumini .menu-detail{
+    display: none;   
+}
+.home-header-menumini .menu-detail li{
+    padding: 10px;
+    width: 100px;
+}
+.home-header-menumini .menu-detail li a{
+    background-color: white;
+    color: rgb(243, 9, 9); 
+}
+/* -----------body--------- */
+.body::before {
+    display: block;
+    content: "";
+    margin-top: -1px;
+    height: 133px;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* ---category---------------- */
+.body_menu-banner{
+    max-width: var(--commonwidth);
+    display: flex;
+    /* margin-left: -8px;     */
+    margin: 20px auto;       
+}
+.body_menu,.home-body-baner1,.home-body-baner2{
+    height: 407px;
+    background-color: white(103, 104, 47);
+    margin-left: 14px;    
+}
+.body_menu{
+    width: 271px;    
+    padding: 0px;
+    margin-left: 0px;
+}
+.home-body-baner1{
+    width: 572px;
+}
+.home-body-baner2{
+    width: 276px;
+}
+.home-body-baner1 img,.home-body-baner2 img{
+    width: 100%;
+    height: 100%;
+}
+.body_menu div{    
+    height:calc(calc(407px/6)-1px);
+    /* width: 270px; */
+    width: 100%;
+    list-style-type: none;
+    font-size: 18px;
+    background-color: black;       
+    color:white;
+    width: 100%;
+    margin-bottom: 1px;
+    line-height: 58px;
+    padding-left: 10px;  
+    box-sizing: border-box;      
+}
+.body_menu--tittle#menu-tittle--color{
+    background-color: green;
+}
+
+
+/* chinh sach */
+.box-apreassurances{
+    max-width: var(--commonwidth);
+    margin: auto;
+    display: flex;
+    flex-direction: var(--commondirection);
+    flex-wrap: wrap;    
+    margin-bottom: 20px;
+}
+.apreassurances-item{
+    width: 25%;
+    display:flex;       
+    height: 108px;
+    background-color: white; 
+    align-items: center;
+    display: flex;      
+}
+.apreassurances-item:hover{    
+    cursor: pointer;
+}
+.apreassurances-item:hover a{
+    color:red;
+}
+/* footer */
+.footer{
+    max-width: var(--commonwidth);
+    background-color: black;    
+    margin: 0px auto;    
+    box-sizing: border-box;
+}
+.footer,.footer a{
+    color: white;
+}
+.footer-header{
+    width: 100%;
+    text-align: center;       
+    background-color: #848181; 
+}
+.footer-header-form input{
+    height: 25px;
+    width: 50%;
+}
+.footer-header-form input[type=button]{
+    width: 100px;
+    height: 34px;    
+    background-color: #6BC15F;
+    margin-left: -10px;
+    color: white;
+    margin-bottom: 10px;
+}
+.footer-header-form input[type=button]:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+}
+.footer-center--img img{
+    width: 200px;
+}
+.footer-center-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-direction: var(--commondirection);
+}
+.footer-center--img,.footer-center-mission{
+    text-align: center;
+}
+.footer-center-info{
+    padding: 20px;
+    padding-left: 200px;
+}
+.footer-center-info>div{
+    width: 35%;    
+}
+
+/* .footer-center-infor div{
+    margin-bottom: 5px;
+} */
+
+/* featurebrand */
+.featurebrand{
+    max-width: var(--commonwidth);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: var(--commondirection);
+    margin: auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.featurebrand>div{
+    width: calc(calc(100%/var(--collumn)) + var(--spacing));
+    height: 108px;
+    display: flex;
+    align-items: center;    
+    box-sizing: border-box;
+}
+
+
+
+/* responsive */
+@media only screen and (max-width:1024px) {
+    .page{
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+    :root{
+        --collumn:3;
+    }
+    .header{
+        height: 100px;
+        /* position: relative; */
+    }
+    .header-cart-account{
+        position: absolute;
+        top: 50px;
+        right: 0px;
+    }
+}
+
+@media  screen and (max-width:768px) {
+    :root{
+        --collumn:2;               
+    }  
+    .apreassurances-item{
+        width: 48%;
+    }    
+    .home-header{
+        flex-direction: column;
+    }
+    .header_logo,.header_nav{
+        height: 100px;
+    }
+    .header_nav-main{
+        width: 100%;
+    }
+    .body::before {        
+        height: 250px;        
+    }
+    /* .home-header-menu li{
+        margin-left: 0px;
+    } */
+
+
+    /* --Danh mục-------------- */
+    .home-body-baner2{
+        display: none;
+    }
+    /* ----footer------- */
+    .footer-center-mission{
+        padding: 0px 5px;
+    }
+    .footer-center-info{        
+        padding:0px 15px;
+    }
+    .footer-center-info>div{
+        width: 100%;    
+    }
+    
+
+
+    /* trang giỏ hàng--------- */
+
+
+
+    /* ------trang đăng ký---------- */
+    .register-container .fullname{
+        flex-direction: column;
+        
+    }
+    .register-container .fullname #first,.register-container .fullname #last{
+        width: 100%;
+    }
+    .register-form-row{
+        width: 100%;
+    }   
+}
+@media  screen and (max-width:376px) {
+    :root{
+        --collumn:1;      
+        --commondirection:column;       
+    } 
+    .header{
+        position: relative;
+    }
+    .body::before {        
+        height: 90px;        
+    }
+    .header-cart-account{
+        float: left;
+        position: relative;
+        text-align: center;
+        top: 0px;
+        padding: 0px;
+    }
+    .header-cart-account>div{
+        padding-top: 0px;
+        height: 15px;
+    }
+
+    /* --beseler----- */
+    .bestseller-list>div img,.newproduct-list>div img{
+        flex: 1;
+    }
+    .apreassurances-item{
+        display: none;
+    }
+
+     /* --Danh mục-------------- */
+    .home-body-baner1{
+        display: none;
+    }
+    /* .home-body-baner2{
+        display: inline-block;
+    } */
+    .body_menu{
+        width: 100%;
+    }
+
+    /* -------nhãn hàng------- */
+
+    .featurebrand>div{
+       text-align: center;  
+    }
+
+
+    /* -----menumini */
+    .header_nav{
+        display: none;
+    }
+    .home-header-menumini{
+        display: block;
+        float: left;
+    }
+    .home-header-menumini>ul>li:hover .menu-detail{
+        display: block;
+    }
+    /* ----footer------- */
+    .footer-center-mission{
+        padding: 0px 5px;
+   }
+    .footer-center-info{        
+       padding:0px 15px;
+   }
+   .footer-center-info>div{
+       width: 100%;    
+   }
+
+    /* trang giỏ hàng--------- */
+    
+    .cart-table thead{
+        display: none;
+    }
+    .cart-table table, .cart-table tbody,.cart-table tr,.cart-table td{        
+        display: block;
+        width: 100%;                      
+    }
+    .cart-btn{
+        flex-direction: column;        
+    }
+    
+    .cart-table td{
+        text-align: right;
+        padding-left: 50%;
+        box-sizing: border-box;
+    }
+    .cart-table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+

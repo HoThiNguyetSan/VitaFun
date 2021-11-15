@@ -1,0 +1,60 @@
+/* --------------trang đăng ký-------- */
+.register-container{
+    max-width: 800px;
+    margin: auto;
+    background-color: #EBEBEB;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.register-container h1{
+    text-align: center;
+}
+.register-form-row {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.register-form-row input{
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.register-form-row #first,.register-form-row #last{
+    width: 214px;
+}
+.register-form-row #pnb,.register-form-row #pwd{
+    width: 100%;
+}
+.register-form-row input[type=button]{
+    width: 314px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.register-container .btn{
+    text-align: center;        
+}
+.register-container .fullname{
+    display: flex;
+    justify-content: space-between;
+}
+.register-form-row span{
+    color: red;
+}
+.register-form-row #actregis{
+    background-color: #F0895D;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+.register-container .btn input{       
+    background-position:left; 
+    background-size: 20px;
+    background-repeat:no-repeat;
+    font-size: 20px;
+    background-color: white;
+}
+.register-container .btn input:hover{
+    cursor: pointer;
+}
