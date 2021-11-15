@@ -1,0 +1,17 @@
+.container{
+   display: flex;
+   margin: 25px 50px 20px 100px;
+}
+.img{   
+    width: 32%; 
+
+    flex: left;
+}
+.content{
+    width: 63%;      
+    flex:left;
+}
+.Slogan{
+    margin-top: 50px;
+    text-align: center;
+}
