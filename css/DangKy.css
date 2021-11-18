@@ -1,0 +1,82 @@
+/* --------------trang đăng ký-------- */
+.register-container{
+    max-width: 800px;
+    margin: auto;
+    background-color: #EBEBEB;
+    padding:3% 5%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.register-container h1{
+    text-align: center;
+}
+.register-form__row {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.register-form__row input{
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.register-form__row #first,.register-form__row #last{
+    width: 214px;
+}
+.register-form__row #pnb,.register-form__row #pwd{
+    width: 100%;
+}
+.register-form__row input[type=button]{
+    width: 314px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.register-container .btn{
+    text-align: center;        
+}
+.register-container .fullname{
+    display: flex;
+    justify-content: space-between;
+}
+.register-container .fullname label{
+    width: 40px;
+    display: inline-block;
+}
+.register-form__row span{
+    color: red;
+}
+.register-form__row #actregis{
+    background-color: #F0895D;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+.register-container .btn input{       
+    background-position:left; 
+    background-size: 20px;
+    background-repeat:no-repeat;
+    font-size: 20px;
+    background-color: white;
+}
+.register-container .btn input:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:768px){
+  
+}
+@media screen and (max-width:376px){
+    .register-container{
+        width: 100%;
+        padding: 0px;
+        font-size: 16px;
+
+    }
+   .register-container .fullname{
+       flex-direction: column;
+   }
+   .register-form__row #first,.register-form__row #last{
+    width: 323px;
+}
+}

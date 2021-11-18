@@ -1,0 +1,105 @@
+
+.login{
+    max-width: 800px;
+    display: flex;
+    margin: auto;       
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.login a:first-child{
+    text-decoration: none;
+    color: #2400FF;
+}
+.login>div{
+    width: 50%;    
+    height: 500px;   
+    padding:0px 5%;   
+}
+.login-form{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;   
+    box-sizing: border-box;
+}
+.login-infor__form,.login-form__row{
+    text-align: center;
+}
+.login-form__row{
+    margin-bottom: 10px;      
+}
+.login input[type=text],
+.login input[type=button]{
+    width: 80%;
+    height: 45px;    
+    font-size: 20px;
+    padding-left: 20px;    
+}
+.login .checkpass{
+    text-align: left;
+    padding-left: 10%;
+}
+hr{
+    width: 70%;
+}
+.login-form__row input[type=button],.login-infor{
+    background-color: #F0895D;
+    color: white; 
+}
+.login-form .image{
+    display: flex;
+    justify-content: space-evenly;
+}
+.login-form img{
+    width: 40px;    
+}
+.login .addition{
+    display: none;
+}
+.login .addition>div{
+    margin-bottom: 10px;
+}
+.login .addition a,.login-infor p,.login input[type=button]{
+    font-weight: bold;    
+}
+.login .addition a{
+    color: #2400FF;
+}
+.login-infor{            
+    box-sizing: border-box;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.login-infor p{     
+    font-size: 18px;
+    line-height: 20px;
+}
+.login-infor__form input{
+    background-color: white;
+    color: #666666;
+}
+.login input[type=button]{  
+    width: 90%;   
+    font-size: 20px;    
+    border-radius: 20px;        
+}
+.login input[type=button]:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+  
+}
+@media screen and (max-width:376px){
+   
+    .login-infor{
+        display: none;
+    }    
+    .login>div{
+        width: 100%;
+    }
+    .login .addition{
+        display: block;
+    }
+   
+}

@@ -1,0 +1,61 @@
+/* chinh sach */
+:root{
+    --commonwidth:1150px ;
+    --collumn:6;
+    --commondirection:row;
+    --spacing:-2px;
+    --rong:1000px;
+    --commonheight:362px;  
+}
+.box-apreassurances{
+    max-width: var(--commonwidth);
+    margin: auto;
+    display: flex;
+    flex-direction: var(--commondirection);
+    flex-wrap: wrap;    
+    margin-bottom: 10px;
+}
+.apreassurances__item{
+    width: 25%;
+    display:flex;       
+    height: 108px;
+    background-color: white; 
+    align-items: center;
+    display: flex;      
+}
+.apreassurances__item:hover{    
+    cursor: pointer;
+}
+.apreassurances__item:hover a{
+    color:red;
+}
+@media only screen and (max-width:1024px) {
+    .page{
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+    :root{
+        --collumn:3;
+    }
+    .header{
+        height: 100px;
+        /* position: relative; */
+    }
+    .header-cart-account{
+        position: absolute;
+        top: 50px;
+        right: 0px;
+    }
+}
+@media  screen and (max-width:768px) {
+    
+}
+@media  screen and (max-width:376px) {
+    :root{
+        --collumn:2;               
+    }  
+    .apreassurances__item{
+        width: 48%;
+        padding: 0px 2px;
+    }   
+}
