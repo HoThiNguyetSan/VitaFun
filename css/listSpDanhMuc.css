@@ -1,0 +1,13 @@
+.product-list{
+    color:#474747 ;
+    max-width: 859px;
+    margin-top: 22px;
+}
+.product-list-main{
+    background-color: #fff;
+}
+.product-list__header{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}

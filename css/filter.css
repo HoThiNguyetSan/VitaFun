@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .product-body{
     width: 271px; 
     margin-left: 14px; 
@@ -11,4 +12,36 @@
     line-height: 58px;
     padding-left: 10px;  
     box-sizing: border-box;
+=======
+
+#filter__tittle--color{
+    background-color: #E9650C;
+    height: 58px;
+    display: flex;
+}
+.filter__tittle >span{
+    color:white;
+    margin: auto 20px auto;
+}
+
+.filter__main{
+    width: 100%;
+    padding: 15px;
+}
+
+.body__filter{
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 1px;
+    line-height: 40px;
+    width: 271px; 
+    max-height: 749px;
+    margin: 22px 20px 0px 0px;
+}
+.filter__main >div div{
+    padding: 0px 20px;
+}
+.boloc__item span{
+    padding: 0px 10px;
+>>>>>>> Stashed changes
 }
