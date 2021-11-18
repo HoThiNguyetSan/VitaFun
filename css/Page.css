@@ -1,42 +1,52 @@
 *{  
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
+    color: black;
+}
+:root{
+    --commonwidth:1150px ;
+    --commondirection:row;
 }
 /* -----------body--------- */
-.body::before {
+main::before {
     display: block;
     content: "";
     margin-top: -1px;
-    height: 138px;
+    height: 145px;
     visibility: hidden;
     pointer-events: none;
+}
+main {
+    max-width:1150px ;
+    display: flexbox;
+    margin: 0px auto;
+    padding: 10px;
 }
 .page{
     font-family: Arial,sans-serif;
     font-size: 16px;
     line-height: 1.42857;
-    color: rgb(34, 34, 34);
-    background-color: #f5f5f5;;            
+    color: #474747;
+    background-color: #f5f5f5;          
     justify-content: center;       
     width: 100%;        
 }  
 iframe{
     width: 100%;
-    margin-bottom: 0px;
-    overflow: hidden;
 }
 .iframe-header{
     position: fixed;
-    min-height:100px;
+    max-height:200px;
 }
 .iframe-footer{
-    min-height:300px;
+    max-height:1000px;
 }
 .iframe-branch{
-    min-height:108px;
+    max-height:108px;
     
 }
 .iframe-policy{

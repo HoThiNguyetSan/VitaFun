@@ -1,9 +1,7 @@
 /* featurebrand */
 :root{
-    --commonwidth:1150px ;
     --collumn:6;
-    --commondirection:row;
-    --spacing:-2px;
+    /* --spacing:-2px; */
     --rong:1000px;
 }
 .featurebrand{
@@ -11,17 +9,23 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: var(--commondirection);
-    margin: auto;
+    margin: auto 0%;
     background-color: white;
-    margin-bottom: 10px;
-    height: 108px;
+    margin-bottom: 22px;
+    max-height: 108px;
 }
 .featurebrand>div{
     width: calc(calc(100%/var(--collumn)) + var(--spacing));
-    height: 108px;
+    height: 100%;
     display: flex;
     align-items: center;    
     box-sizing: border-box;
+}
+
+.featurebrand img{
+    max-height: 70px;
+    max-width: calc(1150/6);
+    margin: auto;
 }
 @media  screen and (max-width:768px) {
     :root{

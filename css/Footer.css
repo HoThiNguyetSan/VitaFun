@@ -1,16 +1,9 @@
 /* footer */
-:root{
-    --commonwidth:1150px ;
-    --collumn:6;
-    --commondirection:row;
-    --spacing:-2px;
-    --rong:1000px;
-}
+
 .footer{
     max-width: var(--commonwidth);
     background-color: black;    
-    margin: 0px auto;    
-    box-sizing: border-box;
+    margin: 0px auto; 
 }
 .footer,.footer a{
     color: white;
