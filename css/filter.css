@@ -1,18 +1,3 @@
-<<<<<<< Updated upstream
-.product-body{
-    width: 271px; 
-    margin-left: 14px; 
-}
-#filter__tittle--color{
-    background-color: #E9650C;
-}
-.filter__tittle{
-    font-size: 18px;
-    color:white;
-    line-height: 58px;
-    padding-left: 10px;  
-    box-sizing: border-box;
-=======
 
 #filter__tittle--color{
     background-color: #E9650C;
@@ -43,5 +28,4 @@
 }
 .boloc__item span{
     padding: 0px 10px;
->>>>>>> Stashed changes
 }
