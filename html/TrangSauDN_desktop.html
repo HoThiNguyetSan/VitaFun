@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang tài khoản</title>
+    <link rel="stylesheet" href="../css/Page.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../css/TrangSauDN.css">
+
+</head>
+<body>
+    <div class="page">
+      <!-- header -->
+      <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe> 
+
+            <!-- header -->
+
+            <!-- body -->
+            <main class="body">
+            <div class="body-account--desktop">
+                <div class="file-head">
+                    <p class="heading">Hồ sơ của tôi</p>
+                    <p>Quản lý thông tin hồ sơ để bảo mật tài khoản </p>
+                </div>
+                <hr id="hr1">
+                <div class="file-avatar">
+                    <div class="avatar-img"><img src="../Hinh/HinhSauDN/taikhoan.png" alt=""> </div>
+                    <div class="avatar-note">
+                        <button type="button" class="choose-img">Chọn ảnh</button>
+                        <p>Dung lượng file tối đa 1 MB</p>
+                        <p>Định dạng:.JPEG, .PNG</p>
+
+                    </div>
+                 
+                </div>
+                <hr id="hr2">
+                <div class="file-info">
+                    <div class="info-column">
+                        <label for="" id="heading">Tên đăng nhập:</label>
+                        <input type="text" id="username" placeholder="ng.vana1245">
+                    </div>
+                    <div class="info-column">
+                        <label for="" id="heading">Tên:</label>
+                        <input type="text" id="name" placeholder="Nguyễn Văn A">
+                    </div>
+                    <div class="info-column">
+                        <label for="" id="heading">Email:</label>
+                        <input type="text" id="emaill" placeholder="n*****2@gmail.com">
+                    </div>
+                    <div class="info-column">
+                        <label for="" id="heading">Số điện thoại:</label>
+                        <input type="text" id="sdt" placeholder="*******29">
+                    </div>
+                    <div class="info-column column--gender ">
+                        <label for="" id="heading">Giới tính:</label>
+                      <div class="gender-radio"> <input type="radio" value="female" name="gender">Nam 
+                        <input type="radio" value="male" name="gender" id="male">Nữ
+                        <input type="radio" value="other" id="other" name="gender">Khác </div> 
+
+                    </div>
+                    <div class="info-column birthday">
+                        <label for="" id="heading">Ngày sinh:</label>
+                       <select name="" id="date">
+                            <option value="date"></option>
+                        </select>
+                        <select name="" id="month">
+                            <option value="month"></option>
+                        </select>
+                        <select name="" id="year">
+                            <option value="year"></option>
+                        </select>
+                
+                    </div>
+                    <div class="info-column file-save">
+                        <div></div>
+                        <button type="button" class="save-file">Lưu</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+            <!-- body -->
+    <iframe class="iframe-footer" src="./Footer.html" frameborder="0"></iframe>  
+      <!-- footer -->
+
+    </div>
+</body>
+</html>
