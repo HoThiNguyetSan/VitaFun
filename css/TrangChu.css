@@ -1,7 +1,5 @@
 :root{
-    --commonwidth:1150px ;
     --collumn:6;
-    --commondirection:row;
     --spacing:-2px;
     --rong:1000px;
     --commonheight:364px;  
@@ -12,13 +10,13 @@
     max-width: var(--commonwidth);
     display: flex;
     flex-direction: var(--commondirection);
-    /* margin-left: -8px;     */
-    margin: 20px auto;       
+    margin-left: 14px;    
+    margin: 20px auto;
+    height: 407px;       
 }
 .body__menu,.home-body__baner1,.home-body__baner2{
-    max-height: 407px;
-    background-color: white(103, 104, 47);
-    margin-left: 14px;    
+    margin-left: 14px; 
+    height: 100%;   
 }
 .body__menu{
     width: 271px;    
@@ -30,20 +28,19 @@
 }
 .home-body__baner2{
     width: 276px;
+
 }
 .home-body__baner1 img,.home-body__baner2 img{
     width: 100%;
     height: 100%;
 }
 .body__menu--tittle,.body__menu--detail div{    
-    height:calc(calc(407px/6)-1px);
-    /* width: 270px; */
+    /* height:calc(calc(407px/6)-1px); */
     width: 100%;
     list-style-type: none;
     font-size: 18px;
     background-color: black;       
     color:white;
-    width: 100%;
     margin-bottom: 1px;
     line-height: 58px;
     padding-left: 10px;  
@@ -64,8 +61,7 @@
 /* -------best seller--------newproduct */
 .bestseller,.newproduct{   
     max-width:var(--commonwidth);       
-    margin: auto;
-    margin-bottom: 20px;    
+    margin: 20px auto;  
 }
 .bestseller-meta,.bestseller-list,.newproduct-meta,.newproduct-list{
     width: 100%;    
@@ -155,10 +151,20 @@
     }
     .apreassurances-item{
         width: 48%;
-    }             
+    }            
+    .body-menu-banner{
+     height: 273px;   
+    }
     /* --Danh mục-------------- */
     .home-body__baner2{
         display: none;
+    }
+    .body__menu{
+        width: 199px;
+    }
+    .body__menu--tittle,.body__menu--detail div{
+        font-size: 14px;
+        line-height: 39px;
     }
 }
 @media  screen and (max-width:376px) {   
@@ -198,7 +204,15 @@
         box-sizing: border-box;
         width: 90%;
     }
-    
+
+
+    /* .body-menu-banner */
+    .body-menu-banner{
+        display: flex;
+        flex-direction: column;
+    }
+
+
      /* --Danh mục-------------- */
     input#chk-banner:checked + .body__menu--detail{
         display: block;

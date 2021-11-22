@@ -20,19 +20,18 @@ header{
 }
 .header-container{   
     background-color: white;
+    height: 90px;
 }
 .header-main{
     max-width: var(--commonwidth); 
     margin: auto;
     display: flex;    
     flex-wrap: wrap;
-}
-.header__nav{
-    margin: 1% auto;
+    justify-content: space-between;
 }
 .header__logo,.header__nav{
     max-height: 100px;
-    padding-top: 15px;
+    margin-top: 15px;
 }
 .header-cart-account>div{
     max-height: 100px;
@@ -42,11 +41,12 @@ header{
     color: rgb(37, 37, 37);
 }
 .header__logo{    
-    width: 271px; 
-    padding-left: 5px;   
+    width: 197px; 
+    height: 55px;
+    margin-left: 10px;
 }
 .header__logo img{
-    height: 80%;    
+    height: 100%;    
 }
 .header__nav-menu{
     width: 572px;
@@ -57,7 +57,7 @@ header{
    display: flex;    
 }
 .header__nav-menu li{
-    max-width: 143;    
+    max-width: 143px;    
     list-style-type: none;
     margin: auto;    
 }
@@ -65,28 +65,29 @@ header{
 .header__nav-search{
     clear: both;
     max-width: 400px;
-    margin: auto;
-    padding-top: 7px;
+    margin: 8px auto;
+    height: 30px;
 }
 .header__nav-search input[type=text]{
     width: 75%;
-    height: 30px;
+    height: 100%;
     float: left;
 }
 .header__nav-search input[type=button]{
     width: 25%;
-    height: 30px;
+    height: 100%;
     color: white;
     background-color: #6BC15F;
     float: right;
 }
 .header-cart-account{
     width: 179px;
-    margin: auto 30px auto auto;
+    margin-right: 10px;
     display: flex;
 }
 .header-cart-account>div{
     width: 50%;
+    height: 100%;
     text-align: center;    
 }
 .header__cart i{
@@ -107,22 +108,58 @@ header{
     padding: 5px 3px;
     box-sizing: border-box;    
 }
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:970px) {
     .header-cart-account{
-        width: 179px;
-        position: absolute;
-        top: 30px;
-        right: -40px;
+        width: 150px;
+        /* position: absolute; */
+        /* top: 30px; */
+        /* right: -40px; */
     }
     .header__logo{
-        width: 90px;
+        width: 111px;
+        height: 31px;
         padding: 0px;
     }
     .header__logo img{
         width: 100%;
     }
+    .header__nav-menu{
+        width: 422px;
+        height: 30%;   
+        margin-bottom: 1px;     
+    }
     .header__nav-menu li{
-        width: 105px;
+        margin: auto;
+    }
+    .header__nav-search{
+        max-width: 300px;
+        height: 24px;
+    }
+}
+@media  screen and (max-width:705px){
+    .header-cart-account{
+        display: none;
+    }
+    .header-main{
+        justify-content: flex-start;
+    }
+}
+
+@media  screen and (max-width:543px){
+    .header-cart-account{
+        display: flex;
+        width: 150px;
+        height: 55px;
+        position: absolute;
+        top: 30px;
+        right: 0px;
+    }
+    .header-container{
+        height: 115px;
+    }
+    
+    .header__nav{
+        margin: 15px auto;     
     }
 }
 @media  screen and (max-width:376px) {
@@ -155,6 +192,7 @@ header{
     }
     .header__logo{
         height: 80px;
+        width: 286,4px;
     }
     .header__nav-menu{
         display: block;
