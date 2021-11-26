@@ -12,11 +12,11 @@
 }
 .product-list__header{
     display: flex;
-    height: 70px;
+    height: 60px;
     justify-content: space-between;
 }
 .product-list__header> span{
-    font-size: 35px;
+    font-size: 38px;
     font-weight: bold;
     margin: auto auto 2px 7px;
 }
