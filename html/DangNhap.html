@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/DangNhap.css">
     <link rel="stylesheet" href="../css/Page.css">
+    <script src="../javascript/DangNhap.js" defer></script>
 </head>
 <body>
     <div class="page">
@@ -18,13 +19,13 @@
                         <h1>ĐĂNG NHẬP</h1>
                     </div>
                     <div class="login-form__row">
-                        <input type="text" placeholder="Số điện thoại">
+                        <input type="text"  id="nameLogin" placeholder="Số điện thoại">
                     </div>
                     <div class="login-form__row">
-                        <input type="text" placeholder="Mật khẩu">
+                        <input type="password"  placeholder="Mật khẩu" id="pwd">
                     </div>
                     <div class="login-form__row checkpass">
-                        <input type="checkbox"> Hiện mật khẩu
+                        <input type="checkbox" id="show-pwd"> Hiện mật khẩu
                     </div>
                     <div class="login-form__row">
                         <input type="button" value="Đăng nhập">
@@ -34,9 +35,9 @@
                     </div>
                     <hr>
                     <div class="login-form__row image">
-                        <span><a href=""><img src="../Hinh/HinhDangKy/face.png" alt=""></a></span>
-                        <span><a href=""><img src="../Hinh/HinhDangKy/email.jfif" alt=""></a></span>
-                        <span><a href=""><img src="../Hinh/HinhDangKy/google.jfif" alt=""></a></span>
+                        <span id="facebook-dn"><img src="../Hinh/HinhDangKy/face.png" alt=""></span>
+                        <span id="email-dn"><img src="../Hinh/HinhDangKy/email.jfif" alt=""></span>
+                        <span id="google-dn"><img src="../Hinh/HinhDangKy/google.jfif" alt=""></span>
                     </div>    
                     <div class="login-form__row addition">
                         <div>Bạn chưa có tài khoản?</div>
@@ -53,7 +54,7 @@
                         Hãy nhấp vào nút đăng ký và tạo tài khoản ngay thôi nào
                     </p>
                     <div class="login-infor__form">
-                        <input type="button" value="Đăng ký">
+                        <a href="./DangKy.html"><input type="button" value="Đăng ký"></a>
                     </div>
                 </div>
             </div>

@@ -80,6 +80,11 @@
     cursor: pointer;
     background-color: rgb(158, 204, 32);
 }
+.input-quantity{
+    border: none; 
+    height: 20px; 
+    text-align: center
+}
 @media screen and (max-width:768px){
     .cart-container{
         width: 100%;

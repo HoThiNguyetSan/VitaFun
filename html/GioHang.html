@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/GioHangg.css">
     <link rel="stylesheet" href="../css/Page.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="../javascript/GioHang.js" defer></script>  
 </head>
 <body>
     <div class="page">
@@ -26,37 +27,57 @@
                                 <th>Tên sản phẩm</th>
                                 <th>Số lượng</th>
                                 <th>Giá</th>
-                                <th>Xóa</th>
+                                <th>Tổng</th>
+                                <th>Chọn</th>
                             </tr>
                         </thead>                
-                        <tbody>
+                        <tbody class="sanpham">
                             <tr>
-                                <td data-label="Mã sản phẩm">3</td >
+                                <td data-label="Mã sản phẩm">1</td >
                                 <td  data-label="Tên sản phẩm">Cà Phê hòa tan 3in1 đạm vị cà phê Nescafé Túi 782g</td>
-                                <td  data-label="Số lượng">2</td >
+                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item1" onchange="Gia1()"></td >
                                 <td  data-label="Giá">
                                     <div>
-                                        99,000*2
-                                    </div>
-                                    <div>
-                                        =198000
+                                        99,000 
                                     </div>
                                 </td>
-                                <td  data-label="Xóa"><input type="checkbox"></td>                                 
-                            </tr>               
+                                <td>
+                                    <div>
+                                        <input class="input-quantity" type="text" id="checkbox1">
+                                    </div>
+                                </td>
+                                <td  data-label="Chọn"><input type="checkbox" name="chon" value="" id="kq1"></td>                                 
+                            </tr>     
+                            <tr>
+                                <td data-label="Mã sản phẩm">2</td >
+                                <td  data-label="Tên sản phẩm">Bánh quy AFC vị rau củ hộp 200g</td>
+                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item2" onchange="Gia2()"></td >
+                                <td  data-label="Giá">
+                                    <div>
+                                        40,000
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input class="input-quantity" type="text" id="checkbox2">
+                                    </div>
+                                </td>
+                                <td  data-label="Chọn"><input type="checkbox" name="chon" value="" id="kq2"></td>                                 
+                            </tr>              
                         </tbody>
                     </table>
                 </div>
                 <div class="cart__sum">
-                    <div>Tổng cộng</div>
-                    <div>198000đ</div>            
+                    <!-- <input type="button" value="Tổng cộng" id="btn"> -->
+                   <div id="btn">Tổng cổng</div>
+                    <div  id="Total"></div>          
                 </div>        
                 <div class="cart-btn">
                     <div class="cart-btn__row1">
-                        <input type="button" value="Tiếp tục mua hàng">
+                       <a href="TrangChu.html"><input type="button" value="Tiếp tục mua hàng"></a> 
                     </div>
-                    <div class="cart-bt__row2">
-                        <input type="button" value="Thanh toán">
+                    <div class="cart-bt__row2" id="thanhtoan">
+                        <a href="ThanhToan.html"><input type="button" value="Thanh toán"></a>
                     </div>
                 </div>
             </div>   
@@ -65,5 +86,6 @@
         </main> 
         <iframe class="iframe-footer" src="./Footer.html" frameborder="0"></iframe>       
     </div>
+    
 </body>
 </html>

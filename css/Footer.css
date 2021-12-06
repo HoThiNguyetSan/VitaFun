@@ -33,9 +33,13 @@
     cursor: pointer;
     background-color: greenyellow;
 }
+.footer-center--img{
+    height: 50px;
+    width: auto;
+}
 .footer-center--img img{
-    width: 215px;
-    height: 60px;
+    width: auto;
+    height: 100%;
 }
 .footer-center-info{
     display: flex;
@@ -52,6 +56,7 @@
     .footer-center-mission{
         padding: 0px 5px;
     }
+    
 }
 @media  screen and (max-width:426px) {
     :root{          

@@ -9,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="./css/TrangChu.css">
     <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">
-    <link rel="stylesheet" href="./css/Page.css">     
+    <link rel="stylesheet" href="./css/Page.css">    
+    <script src="./javascript/TrangChu.js" defer></script>     
 </head>
 <body>
-    <div class="page">     
-        <iframe class="iframe-header" src="./html/Header.html"  frameborder="0"></iframe> 
+    <div class="page">
+            <iframe class="iframe-header" src="./html/Header.html"  frameborder="0"></iframe>  
         <main class="body">
             <div class="body-menu-banner">
                 <div class="body__menu">                  
@@ -22,19 +23,19 @@
                     </div>
                     <input type="checkbox" id="chk-banner" style="display: none;">
                     <div class="body__menu--detail">
-                        <a href="">
+                        <a href="./html/TrangBanh.html" target="_top">
                             <div>Bánh</div>
                         </a>
-                        <a href="./TrangKeo.html">
+                        <a href="./html/TrangKeo.html" target="_top">
                             <div>Kẹo</div>
                         </a>
-                        <a href="">
+                        <a href="./html/TrangSnack.html" target="_top">
                             <div>Snacks</div>
                         </a>
-                        <a href="">
+                        <a href="./html/trangNuoc.html" target="_top">
                             <div>Nước ngọt</div>
                         </a>
-                        <a href="">
+                        <a href="./html/TrangBot.html" target="_top">
                             <div>Bột làm bánh</div>
                         </a>
                         <a href="">
@@ -135,10 +136,10 @@
                 </div>
             </div>   
 
-            <div class="more-product">
-                <label for="chk-more">More...</label>                         
+            <div class="more-bestproduct more-product">
+                <label id="chk-bestmore">More...</label>                         
             </div>
-            <input type="checkbox" id="chk-more" style="display: none;">
+    
                        
             <iframe class="iframe-policy" src="./html/ChinhSach.html" frameborder="0"></iframe>
             <div class="newproduct">
@@ -381,17 +382,13 @@
                         </div>
                     </div>                    
                 </div>
-                <div class="more-product">
-                    <label for="chk-more">More...</label>                         
-                </div>
-                <input type="checkbox" id="chk-more" style="display: none;">
-            </div>
-            <iframe class="iframe-branch" src="./html/NhanHieu.html" frameborder="0"></iframe> 
-            <iframe class="iframe-footer" src="./html/Footer.html" frameborder="0"></iframe>       
-        </main>
-                  
+                <div class="more-newproduct more-product">
+                    <label id="chk-newmore">More...</label>                         
+                </div>              
+            </div>          
+            <iframe class="iframe-branch" src="./html/NhanHieu.html" frameborder="0"></iframe>          
+        </main>        
+        <iframe class="iframe-footer" src="./html/Footer.html" frameborder="0"></iframe>       
     </div>
 </body>
-
-
 </html>
