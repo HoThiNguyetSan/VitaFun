@@ -1,88 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ bánh</title>
-    <link rel="stylesheet" href="../css/banh.css">
-    <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="../css/Page.css">
+    <link rel="stylesheet" href="../css/TrangSanPham.css">
+    <link rel="stylesheet" href="../css/breadcumbs.css">
+    <link rel="stylesheet" href="../css/NhanHieu.css">
+    <link rel="stylesheet" href="../css/listSpDanhMuc.css">
+    <title>Trang Bánh </title>
 </head>
+
 <body>
     <div class="page">
-        <header class="header">
-            <div class="topbar">
-                <a href=""><span> Nhập khuyến mãi</span></a>
-            </div>
-            <div class="header-container">
-                <div class="header-main">
-                    <div class="header_logo">
-                        <a href="./TrangChu.html"><img src="../Hinh/HinhChinh/logp.png" alt=""></a>
-                    </div>
-                    <div class="header_nav">
-                        <div class="header_nav-main">
-                            <ul>
-                                <li><a href="">TRANG CHỦ</a></li>
-                                <li><a href="">SẢN PHẨM</a></li>
-                                <li><a href="">GIỚI THIỆU</a></li>
-                                <li><a href="">LIÊN HỆ</a></li>
-                            </ul>
-                        </div>
-                        <div class="header_nav-search">
-                            <input type="text">
-                            <input type="button" name="" value="Tìm kiếm">
-                        </div>
-                    </div>
-                    <div class="header-cart-account">
-                        <div class="header-cart"> <a href=""><i class="fas fa-cart-arrow-down " id="icon-cart"></i><br>
-                                Giỏ hàng</a>
-                        </div>
-                        <div class="header-account">
-                            <a href=""><i id="icon-account" class="far fa-user-circle"></i><br>
-                                Tài khoản</a>
-                        </div>
-                    </div>
-                    <div class="home-header-menumini">
-                        <ul>
-                            <li><i class="fas fa-bars"></i>
-                                <ul class="menu-detail">
-                                    <li><a href="">TRANG CHỦ</a></li>
-                                    <li><a href="">SẢN PHẨM</a></li>
-                                    <li><a href="">BLOG</a></li>
-                                    <li><a href="">GIỚI THIỆU</a></li>
-                                    <li><a href="">LIÊN HỆ</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-    
-    
+        <iframe class="iframe-header" src="./Header.html" frameborder="0"></iframe>
         <main class="body">
-            <div class="body_menu-banner">
-                <div class="body_menu">
-                    <div class="body_menu--tittle" id="menu-tittle--color"><i class="fas fa-bars"></i>
-                        Danh mục</div>
-                    <nav class="body_menu--rows">
-                        <a href="">
+            <!-- Body banner -->
+            <nav class="breadcrumbs">
+                <ul>
+                    <li><a href="TrangChu.html"><span>Trang chủ </span></a></li>
+                    <li><a href="TrangBanh.html"><span>/ Trang bánh</span></a></li>
+                </ul>
+            </nav>
+            <div class="product-body__menu-banner">
+                <div class="body__menu">
+                    <div class="body__menu--tittle" id="menu-tittle--color"><label for="chk-banner"><i
+                                class="fas fa-bars"></i> Danh mục</label>
+                    </div>
+                    <input type="checkbox" id="chk-banner" style="display: none;">
+                    <nav class="body__menu--detail">
+                        <a href="./TrangBanh.html" target="_top">
                             <div>Bánh</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangKeo.html" target="_top">
                             <div>Kẹo</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangSnack.html" target="_top">
                             <div>Snacks</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangNuoc.html" target="_top">
                             <div>Nước ngọt</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangBot.html" target="_top">
                             <div>Bột làm bánh</div>
                         </a>
                         <a href="">
@@ -90,253 +52,188 @@
                         </a>
                     </nav>
                 </div>
-                <div class="banner-keo">
-                    <img src="../Hinh/HinhTrangBanh/Banner_Banh.jpg" alt="">
+                <div class="body-banner">
+                    <img src="../Hinh/HinhTrangBanh/Banner_Banh.png" alt="">
                 </div>
             </div>
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
-        <div class="product-container">
-            <div class="body-boloc">
-               <div class="box__boloc">
-                <div class="header__boloc">
-                   <h3>BỘ LỌC</h3>
-                </div>
-                <div class="boloc__item boloc__item--1 ">
-                    <p>Khoảng giá</p>
-                 <div>
-                     <input type="text" id="from" placeholder="đ Từ">
-                     <input type="text" id="to" placeholder="đ Đến">
-                 </div>
-               
-            </div>
-             <hr id="hr1">
-                <div class="boloc__item boloc__item--2">
-                <p>Thương hiệu</p>
-                <div><input type="checkbox" id="orion">ORION</div>
-                <div><input type="checkbox" id="bilca">Bilca</div>
-                <div><input type="checkbox" id="kinhdo">Kinh đô</div>
-                <div><input type="checkbox" id="oishi">Oishi</div>
-                <div><input type="checkbox" id="food">Daily Food</div>
-                <div><input type="checkbox" id="richy">Richy</div>
-              
-                </div>
-                <hr id="hr1">
-                <div class="boloc__item boloc__item--3">
-                  
-                    <p>Dịch vụ và khuyến mãi</p>
-                    <div><input type="checkbox" id="freeship">Freeship</div>
-                    <div><input type="checkbox" id="">Đang giảm giá</div>
-                    <div><input type="checkbox" id="">Gì cũng rẻ</div>
-                </div>
-                <hr id="hr1">
-                <div class="boloc__item boloc__item--4">
-                   <div> <input type="submit" id="" value="ÁP DỤNG"></div>
-                   <div> <input type="submit" id="" value="XÓA TẤT CẢ"></div>
-                </div>
-            </div>
-           
-        </div>
-    
-            <div class="body-product">
-            
-    
-                <div class="header__product">
-                  <div>  <h2>Bánh</h2></div>
-                   <div><p> Hiển thị 9 trong 100 kết quả</p></div>
-                </div>
-                <hr id="hr2">
-        
-            <div class="product">
-                    
-                <div class="product-row">
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/ChocoPie cacao(57k).png" alt=""></a>
-                        </div>
-                        <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g</a></div>
-                        <div class="product__info--price">  57,000 ₫</div>
-                    </div>
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/AFC rau củ(42k).jpg" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Quy Mặn AFC VỊ Rau Củ Hộp 12 Gói 200g</a></div>
-                            <div class="product__info--price">42,000 ₫</div>
-                        </div>
-                   </div>
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img src="../Hinh/HinhTrangBanh/Bánh-nhân-cam-Im-Fresh(55k).jpg" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Bông Lan Vị Cam Fresh Berry Hộp 200g</a></div>
-                            <div class="product__info--price">55,000 ₫</div>
-                        </div>
-                    </div>
-                
-            </div>
-    
-                <div class="product-row">
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/Bánh-quy-mè-Cosy-Kinh-Đô (40k).jpg" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Quy Mè Cosy Kinh Đô Hộp 12 Gói 225g</a></div>
-                            <div class="product__info--price">40,000 ₫</div>
-                        </div>
-                    </div>
-    
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/Danisa (195k).png" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Quy Bơ Danisa Hảo Hạng Hộp 200g</a></div>
-                            <div class="product__info--price">195,000 ₫</div>
-                        </div>
-                    </div>
-    
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img src="../Hinh/HinhTrangBanh/Bánh bông lan Solite(30k).jpg" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Bông Lan Solite Hương Bơ Sữa Hộp 225g</a></div>
-                            <div class="product__info--price">30,000 ₫</div>
-                        </div>
-                    </div>
-                </div>
-    
-    
-                <div class="product-row">
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/Bánh sữa dâu Hura(25k).jpg" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Bông Lan Hura Vị Kem Sữa Hộp 12 Gói 200g</a></div>
-                            <div class="product__info--price">25,000 ₫</div>
-                        </div>
-                    </div>
-    
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhTrangBanh/Bánh que Gao hương Socola(12k).png" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Bánh Que Hiệu Gao Hương Vị Socola Hộp 30g</a></div>
-                            <div class="product__info--price">12,000 ₫</div>
-                        </div>
-                    </div>
-    
-                    <div class="product-row__item">
-                        <div class="product__img">
-                            <a href="#"><img src="../Hinh/HinhTrangBanh/Snack mì vị hải sản (107k_24 gói).png" alt=""></a>
-                        </div>
-                        <div class="product__info">
-                            <div class="product__info--name"><a href="#">Snack Mì Vị Hải Sản Giòn Tan Vifon Gói 20g </a></div>
-                            <div class="product__info--price">10,000 ₫</div>
-                        </div>
-                    </div>
-                </div>
-    
-    
-                <div class="product--chuyentrang">
-                    <label for="" ><a href="#"> Previous</a></label>
-                    <input type="submit" value="1">
-                    <input type="submit" value="2">
-                    <label for="" ><a href="#">Next</a></label>
-                </div>
-             </div>
-                <!-- donglayout__productKeo -->
-              
-            </div>  
-            <!-- dong container -->
-        </div>
-    
-    
-    
-    
-    
-    
-    
-        <div class="featurebrand">
-            <div class="featurebrand-item1">
-                <a href=""><img src="../Hinh/vendor_logo_bran1.webp" alt=""></a>
-            </div>
-            <div class="featurebrand-item2">
-                <a href=""><img src="../Hinh/vendor_logo_brand2.webp" alt=""></a>            
-            </div>
-            <div class="featurebrand-item3">
-                <a href=""><img src="../Hinh/vendor_logo_brand3.webp" alt=""></a>            
-            </div>
-            <div class="featurebrand-item4">
-                <a href=""><img src="../Hinh/vendor_logo_brand4.webp" alt=""></a>            
-            </div>
-            <div class="featurebrand-item5">
-                <a href=""><img src="../Hinh/vendor_logo_brand5.webp" alt=""></a>            
-            </div>
-            <div class="featurebrand-item6">
-                <a href=""><img src="../Hinh/vendor_logo_6brand6.webp" alt=""></a>            
-            </div>
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <div class="footer">
-            <div class="footer-header">
-                 <div class="footer-header-meta">
-                     <h2>ĐĂNG KÝ ĐỂ NHẬN KHUYẾN MÃI HẤP DẪN SỚM NHẤT</h2>
-                 </div>
-                 <div class="footer-header-form">
-                     <input type="email" name="email" placeholder="Nhập Email của bạn">                
-                     <input type="button" name="" value="Follow" >                
-                 </div>
-            </div>      
-            <div class="footer-center">
-                <div class="footer-center-img">
-                    <img src="./Hinh/logp.png" alt="">
-                </div>
-                <div class="footer-center-mission">
-                    VitaFun mang đến những sản phẩm chất lượng-an toàn với các bạn. Phục vụ các bạn là niềm vui của chúng tôi.
-                </div>
-                <div class="footer-center-info">
-                    <div class="info-address">
-                        <div>LIÊN HỆ:</div>
-                        <div>Di động: <a href="">0123456789</a></div>
-                        <div>Email: <a href="">vitafun@gmail.com</a></div>
-                        <div>Địa chỉ: 116 Lý Thường Kiệt, Linh Trung, Thủ Đức, HCM, Việt nam</div>
-                    </div>
-                    <div class="footer-center-category">
-                         <div>VITAFUN:</div>
-                         <div><a href="">Trang chủ</a></div>
-                         <div><a href="">Tìm kiếm sản phẩn</a></div>
-                         <div><a href="">Chương trình khuyến mãi</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
- 
 
+
+            <div class="product-body">
+                <!-- --------------bộ lọc----------- -->
+                <iframe class="iframe-filter" src="./filter.html" frameborder="0"></iframe>
+
+                <!-- -----------list sản phẩm---------- -->
+                <div class="product-list">
+                    <div class="product-list-main">
+                        <div class="product-list__header">
+                            <span>Bánh </span>
+                            <p>Hiển thị 9 trong 100 kết quả</p>
+                        </div>
+                        <hr>
+                        <div class="product-list__container">
+                            <div class="product-item product-item--1">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/ChocoPie cacao(57k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">57,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--2">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/AFC rau củ(42k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail_box">
+                                        <a href="">Bánh Quy Mặn AFC VỊ Rau Củ Hộp 12 Gói 200g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">42,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--3">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Bánh-nhân-cam-Im-Fresh(55k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Bông Lan Vị Cam Fresh Berry Hộp 200g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">55,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class=" product-item product-item--4">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Bánh-quy-mè-Cosy-Kinh-Đô (40k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Quy Mè Cosy Kinh Đô Hộp 12 Gói 225g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">40,500đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--5">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Danisa (195k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Quy Bơ Danisa Hảo Hạng Hộp 200g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">195,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--6">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Bánh bông lan Solite(30k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Bông Lan Solite Hương Bơ Sữa Hộp 225g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">30,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class=" product-item product-item--7">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Bánh sữa dâu Hura(25k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Bông Lan Hura Vị Kem Sữa Hộp 12 Gói 200g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">25,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--8">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh//Bánh que Gao hương Socola(12k).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Bánh Que Hiệu Gao Hương Vị Socola Hộp 30g</a>
+                                        <div class="product-prices">
+                                            <p class="product-price">12,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" product-item product-item--9">
+                                <div class="product-image">
+                                    <a href=""><img
+                                            src="../Hinh/HinhTrangBanh/Snack mì vị hải sản (107k_24 gói).jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-detail__box">
+                                        <a href="">Snack Mì Vị Hải Sản Giòn Tan Vifon Gói 20g </a>
+                                        <div class="product-prices">
+                                            <p class="product-price">10,000đ</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                    
+                    <div class="pagination">
+                        <span class="page-node pag-previous"><a href="">Previous </a>
+                        </span>
+                        <span class="page-node pag-current">1</span>
+                        <span class="page-node"><a href="">2 </a>
+                        </span>
+                        <span class="page-node"><a href="">Next</a>
+                        </span>
+                    </div>
+                    <div class="more-newproduct more-product">
+                        <label id="chk-newmore">More...</label>                         
+                    </div>
+                </div>
+
+            </div>
+            <iframe class="iframe-branch" src="./NhanHieu.html" frameborder="0"></iframe>
+            <iframe class="iframe-footer" src="./Footer.html" frameborder="0"></iframe>
+        </main>
+    </div>
 </body>
+
 </html>
