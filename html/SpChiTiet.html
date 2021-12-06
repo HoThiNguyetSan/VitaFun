@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm chi tiết</title>
-    <link rel="stylesheet" href="../css/spchitiet.css">
-    <link rel="stylesheet" href="../css/keo.css">
+    <link rel="stylesheet" href="../css/SPChiTiet.css">
+    <!-- <link rel="stylesheet" href="../css/keo.css"> -->
     <link rel="stylesheet" href="../css/Page.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
@@ -30,13 +30,16 @@
                     <div class="product__info--price">40,000 ₫ &nbsp <span class="price--before">53,000 ₫</span>
                         <p class="priceNote" >Sản phẩm flash sale</p>
                     </div>
-                    <div class="product__info--amount">Số lượng : -|10|+</div>
+                    <div class="product__info--amount">Số lượng : <button type="submit" id="upraise" onclick="soluong(upraise)">-</button>|<input type="text" id="amount" value="1" size="24" required min="1" onchange="soluong(dieukien)">|<button type="submit" id="raise" onclick="soluong(raise)">+</button></div>
                   </div>
         
                 </div> 
         
-                <div class="introProduct-submit"><input type="submit" id="" value="Thêm vào giỏ">
-                <input type="submit" id="" value="Mua ngay">
+                <div class="introProduct-submit">
+                    <!-- <input type="submit" id="" value="Thêm vào giỏ" >
+                <input type="submit" id="" value="Mua ngay"> -->
+                <button type="submit" onclick="themvaogio()"><a href="">Thêm vào giỏ</a></button>
+                <button type="submit"><a href="../html/GioHang.html">Mua ngay</a></button>
                 </div>
             
             </div>
@@ -62,7 +65,7 @@
                 <div class="productSame-row" >
                     <div class="productSame-row__item">
                         <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie cacao(57k).png" alt=""></a>
+                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie cacao(57k).jpg" alt=""></a>
                      </div>
                     
                         <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g </a></div>
@@ -71,7 +74,7 @@
                     </div>
                     <div class="productSame-row__item">
                         <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie chuối (57k).png" alt=""></a>
+                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie chuối (57k).jpg" alt=""></a>
                         </div>
                        
                             <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Chuối Lotte Hộp 336g</a></div>
@@ -80,7 +83,7 @@
                    </div>
                    <div class="productSame-row__item">
                     <div class="product__img">
-                        <a href="#"><img  src="../Hinh/HinhspChiTiet/AFC rau củ(42k).jpg" alt=""></a>
+                        <a href="#"><img  src="../Hinh/HinhspChiTiet/AFC rau củ(42k).jpg" alt=""></a>
                     </div>
                  
                         <div class="product__info--name"><a href="#">Bánh Quy Mặn AFC Vị Rau Củ Hộp 200g</a></div>
@@ -89,7 +92,7 @@
                </div>
                <div class="productSame-row__item">
                 <div class="product__img">
-                    <a href="#"><img  src="../Hinh/HinhspChiTiet/bánh mè Goute(65k).jpg" alt=""></a>
+                    <a href="#"><img  src="../Hinh/HinhspChiTiet/bánh mè Goute(65k).jpg" alt=""></a>
                 </div>
                     <div class="product__info--name"><a href="#">Bánh Goute Mè Giòn Tan Orion Hộp 288g</a></div>
                     <div class="product__info--price">65,000 ₫</div>
@@ -97,7 +100,7 @@
                 </div>
         
               </div>
-               
+               <script src="../javascript/SpChiTiet.js"></script>
     </div>
     <iframe class="iframe-policy" src="./ChinhSach.html" frameborder="0"></iframe>
     <iframe class="iframe-branch" src="./NhanHieu.html" frameborder="0"></iframe>

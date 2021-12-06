@@ -50,7 +50,7 @@ color: black;
    padding-top: 1.5cm;
 
 }
-.avatar-note .choose-img{
+.avatar-note .imageUploadInputBtn{
     background-color:#ff4004;
     height: 40px;
      width: 90%;
@@ -61,6 +61,9 @@ color: black;
     font-size: 20px;
     margin-bottom: 0.7cm;
   
+}
+#imageUploadInput{
+    display: none;
 }
 #hr2{
     width: 60%;
@@ -100,6 +103,12 @@ color: black;
     margin-right: 50px;
     height: 29px;
 }
+input[list]
+{
+  width: 20%;
+    height: 29px;
+}
+
 /*  */
 .file-save .save-file{
     background-color:#ff4004;
@@ -114,7 +123,12 @@ color: black;
     margin-bottom: 0.5cm;
     margin-bottom: 0.5cm;
 }
-
+.save-file > a:visited{
+    color: white;
+}
+.hidden {
+    display: none
+  }
 
 /* reponsive */
 @media  screen and (max-width:768px) {
@@ -129,8 +143,8 @@ color: black;
     margin-left: 0.3cm;
 }
 #date,#month,#year{
- 
     margin-right: 30px;
+
 }
 .info-column>:first-child{
     text-align: left;

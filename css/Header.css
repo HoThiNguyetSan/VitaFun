@@ -1,0 +1,226 @@
+/* -----tittle----- */
+.topbar{
+    height: 40px;
+    width: 100%;    
+    background-color: black;        
+    line-height: 40px;
+    font-size: 20px;
+    top: 0px;   
+    text-align: center;              
+}
+.topbar span{      
+    color: white;
+}
+
+/* -----header-------- */
+header{
+    width: 100%;
+    position: fixed;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.header-container{   
+    background-color: white;
+    height: 90px;
+}
+.header-main{
+    max-width: var(--commonwidth); 
+    margin: auto;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header__logo,.header__nav{
+    max-height: 100px;
+    margin-top: 15px;
+}
+.header-cart-account>div{
+    max-height: 100px;
+    padding-top: 20px;
+}
+#icon-cart, #icon-account{
+    color: rgb(37, 37, 37);
+}
+.header__logo{    
+    width: 197px; 
+    height: 50px;
+    margin-left: 10px;
+}
+.header__logo img{
+    height: auto;  
+    width: 100%;  
+}
+.header__nav-menu{
+    width: 572px;
+    height: 30%;   
+    margin-bottom: 1px;     
+}
+.header__nav-menu ul{
+   display: flex;    
+}
+.header__nav-menu li{
+    max-width: 143px;    
+    list-style-type: none;
+    margin: auto;    
+}
+
+.header__nav-search{
+    clear: both;
+    max-width: 400px;
+    margin: 8px auto;
+    height: 30px;
+}
+.header__nav-search input[type=text]{
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+.header__nav-search input[type=button]{
+    width: 25%;
+    height: 100%;
+    color: white;
+    background-color: #6BC15F;
+    float: right;
+}
+.header-cart-account{
+    width: 179px;
+    margin-right: 10px;
+    display: flex;
+}
+.header-cart-account>div{
+    width: 50%;
+    height: 100%;
+    text-align: center;    
+}
+.header__cart i{
+    font-size: 30px;
+    color: orangered;
+}
+.header-cart-account i{
+    font-size: 30px;
+    color: blue;
+}
+
+#toggle{
+    display: none;
+    background-color: #CEC7C7;
+    width: 100%;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 5px 3px;
+    box-sizing: border-box;    
+}
+@media  screen and (max-width:970px) {
+    .header-cart-account{
+        width: 150px;
+        /* position: absolute; */
+        /* top: 30px; */
+        /* right: -40px; */
+    }
+    .header__logo{
+        width: 111px;
+        height: 31px;
+        padding: 0px;
+    }
+    .header__nav-menu{
+        width: 422px;
+        height: 30%;   
+        margin-bottom: 1px;     
+    }
+    .header__nav-menu li{
+        margin: auto;
+    }
+    .header__nav-search{
+        max-width: 300px;
+        height: 24px;
+    }
+}
+@media  screen and (max-width:705px){
+    .header-cart-account{
+        display: none;
+    }
+    .header-main{
+        justify-content: flex-start;
+    }
+}
+
+@media  screen and (max-width:543px){
+    .header-cart-account{
+        display: flex;
+        width: 150px;
+        height: 55px;
+        position: absolute;
+        top: 30px;
+        right: 0px;
+    }
+    .header-container{
+        height: 115px;
+    }
+    
+    .header__nav{
+        margin: 15px auto;     
+    }
+}
+@media  screen and (max-width:425px) {
+    :root{
+        --commonwidth:100%;
+    }
+    .header{
+        position: relative;
+        width: 270px;
+        height: 185px;
+    }
+    .header__nav{
+        width: 100%;
+        height: 35px;
+    }
+    .header-container{
+        width: 100%;
+        height: 110px;
+    }
+    .header__nav-search{
+        display: none;
+    }
+    .header-cart-account{
+        width: 179px;
+        position: absolute;
+        top: 30px;
+        right: -10px;
+    }
+    .header-main,.header__logo{
+        padding-top: 0px;
+    }
+    .header__logo{
+        width: 100px;
+    }
+    .header__nav-menu{
+        display: block;        
+    }
+    .header__nav-menu >ul{
+        flex-direction: column; 
+        display: none;         
+        width: 144px;
+        background-color: #e7e7e7;
+        margin-left: 30px;
+    }
+    .header__nav-menu li{
+        display: block;  
+        max-width: 100% ;
+        height: 30px;
+        padding-left: 5px;
+        border-bottom: 1px solid black;
+    }
+    .header__nav-menu a{
+        display: flex;
+        height: 30px;
+    }
+    .header__nav-menu a>span{
+        margin: auto auto 2px 0px;
+    }
+    input#chk:checked + .header__nav-menu ul{
+        display: block;
+        
+    }           
+    #toggle{
+        display: block;
+    }
+}
