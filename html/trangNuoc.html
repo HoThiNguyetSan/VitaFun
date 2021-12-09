@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../css/Page.css">
-    <link rel="stylesheet" href="../css/menuBaner.css">
+    <link rel="stylesheet" href="../css/TrangSanPham.css">
     <link rel="stylesheet" href="../css/breadcumbs.css">
     <link rel="stylesheet" href="../css/NhanHieu.css">
     <link rel="stylesheet" href="../css/listSpDanhMuc.css">
@@ -17,7 +16,7 @@
 <body>
     <div class="page">
         <iframe class="iframe-header" src="./Header.html" frameborder="0"></iframe>
-        <main>
+        <main class="body">
             <!-- Body banner -->
             <nav class="breadcrumbs">
                 <ul>
@@ -27,24 +26,27 @@
             </nav>
             <div class="product-body__menu-banner">
                 <div class="body__menu">
-                    <div class="body__menu--tittle" id="menu-tittle--color"><label for="chk-banner"><i
-                                class="fas fa-bars"></i> Danh mục</label>
-                        <input type="checkbox" id="chk-banner" style="display: none;">
+                    <div class="body__menu--tittle" id="menu-tittle--color">
+                        <label for="chk-banner">
+                            <i class="fas fa-bars"></i>
+                            Danh mục
+                        </label>
                     </div>
+                    <input type="checkbox" id="chk-banner" style="display: none;">
                     <nav class="body__menu--detail">
-                        <a href="">
+                        <a href="./TrangBanh.html" target="_top">
                             <div>Bánh</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangKeo.html" target="_top">
                             <div>Kẹo</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangSnack.html" target="_top">
                             <div>Snacks</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangNuoc.html" target="_top">
                             <div>Nước ngọt</div>
                         </a>
-                        <a href="">
+                        <a href="./TrangBot.html" target="_top">
                             <div>Bột làm bánh</div>
                         </a>
                         <a href="">
@@ -53,14 +55,13 @@
                     </nav>
                 </div>
                 <div class="body-banner">
-                    <img src="../Hinh/HinhTrangNuoc/Banner/Banner_Nước_1.jpg" alt="">
+                    <img src="../Hinh/HinhTrangNuoc/Banner/Banner_Nước_1.png" alt="">
                 </div>
             </div>
 
-
             <div class="product-body">
                 <!-- --------------bộ lọc----------- -->
-                <iframe class="iframe-fifter" src="./filter.html" frameborder="0"></iframe>
+                <iframe class="iframe-filter" src="./Filter.html" frameborder="0"></iframe>
 
                 <!-- -----------list sản phẩm---------- -->
                 <div class="product-list">
@@ -71,10 +72,10 @@
                         </div>
                         <hr>
                         <div class="product-list__container">
-                            <div class="product-item">
+                            <div class="product-item product-item--1">
                                 <div class="product-image">
                                     <a href=""><img
-                                            src="../Hinh/HinhTrangNuoc/Hinhsp/Cafe-việt-đen-uống-liền-nescafe-lon-170ml-260x260.png"
+                                            src="../Hinh/HinhTrangNuoc/Hinhsp/Cafe-việt-đen-uống-liền-nescafe-lon-170ml-260x260.jpg"
                                             alt=""></a>
                                 </div>
                                 <div class="product-detail">
@@ -86,7 +87,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--2">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Cà-phê-hòa-tan-3-trong-1-đậm-vị-cà-phê-Nescafé-túi-782g-260x260.jpg"
@@ -101,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--3">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Cà-phê-đen-hòa-tan-G7-hộp-30g-260x260.jpg"
@@ -118,7 +119,7 @@
                             </div>
 
 
-                            <div class=" product-item">
+                            <div class=" product-item product-item--4">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Nuoc-Giai-Khat-Co-Gas-7-Up-300x300.jpg"
@@ -133,7 +134,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--5">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Nuoc-Giai-Khat-Coca-Cola-Chai-1.5L-210x210.jpg"
@@ -148,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--6">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Nước-cam-ép-10-Twister-Pepsico-chai-350ml-260x260.jpg"
@@ -165,7 +166,7 @@
                             </div>
 
 
-                            <div class=" product-item">
+                            <div class=" product-item product-item--7">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Nước-giải-khát-có-gas-Mirinda-hương-xá-xị-chai-1.5L-210x210.jpg"
@@ -180,7 +181,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--8">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Nước-tăng-lực-Sting-hương-dâu-tây-đỏ-lon-330ml-260x260.jpg"
@@ -195,7 +196,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" product-item">
+                            <div class=" product-item product-item--9">
                                 <div class="product-image">
                                     <a href=""><img
                                             src="../Hinh/HinhTrangNuoc/Hinhsp/Trà-Ô-long-Tea-Plus-chai-350ml.jpg"
@@ -212,9 +213,8 @@
                                 </div>
                             </div>
                         </div>
-                        <hr/>
+
                     </div>
-                    
                     <div class="pagination">
                         <span class="page-node pag-previous"><a href="">Previous </a>
                         </span>
@@ -223,6 +223,10 @@
                         </span>
                         <span class="page-node"><a href="">Next</a>
                         </span>
+                        
+                    </div>
+                    <div class="more-newproduct more-product">
+                        <label id="chk-newmore">More...</label>                         
                     </div>
                 </div>
 
