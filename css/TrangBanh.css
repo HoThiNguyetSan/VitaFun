@@ -1,0 +1,81 @@
+/* ---category---------------- */
+
+.product-body__menu-banner{
+    display: flex;
+    margin-top: 10px;
+}
+.body__menu{
+    min-width: 24%;  
+    padding: 0px;
+    margin-left: 0px;
+}
+.body-banner{
+    max-width: 859px;
+    margin-left: 20px;
+}
+.body-banner >img{
+    width: 100%;
+    height: 100%;
+}
+.body__menu--tittle,.body__menu--detail div{   
+    width: 100%;
+    list-style-type: none;
+    font-size: 18px;
+    background-color: black;       
+    color:white;
+    /* margin-bottom: 1px; */
+    line-height: 58px;
+    padding-left: 10px;     
+}
+.body__menu--tittle#menu-tittle--color{
+    background-color: green;
+}
+/* ------- Hình thương hiệu nước--- */
+.featurebrand img{
+    max-height: 70px;
+    max-width: calc(1150/6);
+    margin: auto;
+}
+.boloc__item--4> div >input{
+    background-color: #E9650C;
+    color: #fff ;
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+}
+.product-body{
+    display: flex;
+    width: 100%;
+}
+/* ----------Bộ lọc----------- */
+.iframe-fifter{
+    width: 24%; 
+    min-height: 880px;
+    margin: 20px auto 12px 0px;
+}
+
+/* -----responsive---- */
+
+@media  screen and (max-width:730px){
+    .body__menu--tittle,.body__menu--detail div{
+        font-size: 14px;
+        line-height: 39px;
+    }
+    .product-body__menu-banner{
+        height: 273px;
+    }
+    div.product-list{
+    margin: 20px 7px 20px 7px;
+    }
+
+
+    .iframe-fifter{
+        width: 100%;
+
+    }
+    .product-body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

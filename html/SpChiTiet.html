@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm chi tiết</title>
+    <link rel="stylesheet" href="../css/SPChiTiet.css">
+    <!-- <link rel="stylesheet" href="../css/keo.css"> -->
+    <link rel="stylesheet" href="../css/Page.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="../javascript/SpChiTiet.js" defer></script>
+    <script src="../javascript/angular.js"></script>
+    <script>
+        var urlparams = new URLSearchParams(location.search)
+        var id = urlparams.get("productID")
+        var img = urlparams.get("hinh")
+    </script>
+    <script> 
+        let app = angular.module("angularApp", []);
+        app.controller("DetailController", function($scope, $http){
+            $http({
+                method: "GET",
+                url:"../Data/Products.json"
+            })
+            .then(
+                function success(response){     
+                        
+                        $scope.selectedProduct = response.data.find(function(value){
+                        return value.ID == id;
+                        
+                    })
+                    $scope.a = $scope.selectedProduct.Hinh  
+                },
+                    function error(reponse){                   
+                        $scope.error = reponse.statusText
+                    })    
+                    $scope.hinh = img      
+        })            
+       
+    </script>
+</head>
+<body> 
+<div class="page" >
+
+    <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe>
+    <main class="body" >
+        <div class="body-productDetail" ng-app="angularApp" ng-controller="DetailController" >
+            <div class="introProduct">
+                <div class="introProduct-intro"> 
+                    <div class="product__img"><img src="{{hinh}}" alt=""></div>        
+                    <div class="product__info">               
+                        <div>
+                            <div class="product__info--name">
+                                <h2> {{selectedProduct.Ten}}</h2>
+                                <p><b>30</b> đã bán | <b> <a href="#">3</a> </b> đánh giá</p>
+                            </div>
+                        </div>                       
+                        <div class="product__info--price">{{selectedProduct.Gia|currency:'đ':false}}  &nbsp 
+                            <span class="price--before">{{selectedProduct.Gia*1.5|currency:'đ':false}}</span>                                                         
+                            <p class="priceNote" >Sản phẩm flash sale</p>
+                        </div>
+                         <div class="product__info--amount">Số lượng : 
+                                <button type="submit" id="upraise" onclick="soluong(upraise)">-</button>|<input type="text" id="amount" value="1" size="24" required min="1" onchange="soluong(dieukien)">|<button type="submit" id="raise" onclick="soluong(raise)">+</button>
+                        </div>
+                    </div>        
+                </div> 
+        
+                <div class="introProduct-submit">
+                    <!-- <input type="submit" id="" value="Thêm vào giỏ" >
+                    <input type="submit" id="" value="Mua ngay"> -->
+                    <button type="submit" onclick="themvaogio()"><a href="">Thêm vào giỏ</a></button>
+                    <button type="submit"><a href="../html/GioHang.html">Mua ngay</a></button>
+                </div>            
+            </div>                       
+            <div class="productDescription">
+                <h2>MÔ TẢ SẢN PHẨM</h2> <br>
+                <hr>
+                <p>       
+                    {{selectedProduct.Mota}}
+                </p>
+            </div>        
+            <div class="productSame">
+               <div><h3>SẢN PHẨM TƯƠNG TỰ</h3></div> 
+                <div class="productSame-row" >
+                    <div class="productSame-row__item">
+                        <div class="product__img">
+                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie cacao(57k).jpg" alt=""></a>
+                     </div>
+                    
+                        <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g </a></div>
+                        <div class="product__info--price">57,000 ₫</div>
+                  
+                    </div>
+                    <div class="productSame-row__item">
+                        <div class="product__img">
+                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie chuối (57k).jpg" alt=""></a>
+                        </div>
+                       
+                            <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Chuối Lotte Hộp 336g</a></div>
+                            <div class="product__info--price">57,000 ₫</div>
+                        
+                   </div>
+                   <div class="productSame-row__item">
+                    <div class="product__img">
+                        <a href="#"><img  src="../Hinh/HinhspChiTiet/AFC rau củ(42k).jpg" alt=""></a>
+                    </div>
+                 
+                        <div class="product__info--name"><a href="#">Bánh Quy Mặn AFC Vị Rau Củ Hộp 200g</a></div>
+                        <div class="product__info--price">40,000 ₫</div>
+                    
+               </div>
+               <div class="productSame-row__item">
+                <div class="product__img">
+                    <a href="#"><img  src="../Hinh/HinhspChiTiet/bánh mè Goute(65k).jpg" alt=""></a>
+                </div>
+                    <div class="product__info--name"><a href="#">Bánh Goute Mè Giòn Tan Orion Hộp 288g</a></div>
+                    <div class="product__info--price">65,000 ₫</div>
+                
+                </div>
+        
+              </div>
+               
+    </div>    
+    <iframe class="iframe-policy" src="./ChinhSach.html" frameborder="0"></iframe>
+    <iframe class="iframe-branch" src="./NhanHieu.html" frameborder="0"></iframe>
+</main>
+
+        <iframe class="iframe-footer" src="./Footer.html" frameborder="0"></iframe>  
+    </div>
+</body>
+</html>
+

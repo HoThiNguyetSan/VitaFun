@@ -8,11 +8,13 @@
     <title>Trang chủ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="./css/TrangChu.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">
-    <link rel="stylesheet" href="./css/Page.css">    
-    <script src="./javascript/TrangChu.js" defer></script>     
+    <link rel="stylesheet" href="./css/Page.css">  
+    <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">     
+    <script src="./javascript/TrangChu.js" defer></script> 
+    <script src="./javascript/angular.js"></script>    
+        
 </head>
-<body>
+<body ng-app="BestsellerApp">
     <div class="page">
             <iframe class="iframe-header" src="./html/Header.html"  frameborder="0"></iframe>  
         <main class="body">
@@ -22,7 +24,7 @@
                         <label for="chk-banner"><i class="fas fa-bars"></i> Danh mục</label>                         
                     </div>
                     <input type="checkbox" id="chk-banner" style="display: none;">
-                    <div class="body__menu--detail">
+                    <div class="body__menu--detail">                        
                         <a href="./html/TrangBanh.html" target="_top">
                             <div>Bánh</div>
                         </a>
@@ -50,25 +52,30 @@
                     <img src="./Hinh/HinhTrangChu/Banner/Banner2.jpg" alt="">
                 </div>
             </div>
-            <div class="bestseller">
+            <div class="bestseller" ng-controller="BestsellerProduct">             
                 <div class="bestseller-meta">
+                    <div ng-click="lick()" ng-init="a=window.innerWidt">{{number}}</div>
                     <h2> BÁN CHẠY NHẤT</h2>
-                </div>
+                </div>    
                 <div class="bestseller-list">
-                    <div class="product-item-1">
+                    <div class="product-item" ng-repeat = "p in BestSellerList| limitTo:number" ng-init =" ima = './Hinh/HinhTrangChu/SanPhamTrangChu/'+p.Hinh" ng-if = "p.Loai == 'BCN'" ng-style="{'display': 'block'}">                        
                         <div class="bestnew-product-img">
-                            <a href="./html/SpChiTiet.html"><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/Choco-pie.png" alt=""> </a>
+                            <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}"><img src={{ima}} alt=""></a>
                         </div>
                         <div class="bestnew-product-info">
                             <div class="name">
-                                <a href="./html/SpChiTiet.html" class="product-name">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g </a>
+                                <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}" class="product-name">{{BestSellerList[1].Ten}}</a>
                             </div>
                             <div class="product-price">
-                                57,000đ
+                                {{p.Gia|currency:'đ':false}} 
                             </div>
                         </div>
                     </div>
-                    <div class="product-item-2">
+                    <script defer> 
+                        var c =Array.from(document.querySelectorAll(".product-item")).length
+                        console.log(c)
+                    </script>
+                    <!-- <div class="product-item-2">
                         <div class="bestnew-product-img">
                             <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglansua.jpg" alt=""> </a>
                         </div>
@@ -132,7 +139,7 @@
                                 50,000đ
                             </div>
                         </div>                       
-                    </div>                                                   
+                    </div>                                                    -->
                 </div>
             </div>   
 

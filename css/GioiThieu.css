@@ -1,0 +1,60 @@
+.intro-container{
+    max-width:var(--commonwidth); 
+    background-color: white;
+    display: flex;
+    margin: auto;
+    margin-bottom:20px;
+}
+.intro-container .img{   
+    width: 28%;  
+    margin-right: 2%;
+}
+.intro-container .img img{
+    width: 100%;
+}
+.intro-container .content{
+    width: 70%;    
+    padding: 0px 5px; 
+    box-sizing: border-box;  
+}
+.intro-container .Slogan{
+    margin-top: 50px;
+    text-align: center;
+}
+.intro-container .margin{
+    margin-top: 20px;
+}
+.intro-container li{
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+@media screen and (max-width:768px) {
+    .intro-container .sub-content{
+        display: none;
+    }
+}
+@media screen and (max-width:376px) {
+    .intro-container .img{
+        display: none;
+    }
+    .intro-container .content{
+        width: 100%;
+    }
+    .intro-container{
+   
+        padding-top: 20px;
+        font-weight:600;
+        width: 100%;
+        background-image: url(./Hinh/TrangGioiThieu/257736568_563172408095921_4052752879825771050_n.jpg);
+    }
+    .intro-container .sub-content{
+        display: none;
+    }
+    .intro-container p{
+        margin-bottom: 10px;
+    }
+    .intro-container .vita{
+        font-size: 30px;
+        color: tomato;
+    }
+}

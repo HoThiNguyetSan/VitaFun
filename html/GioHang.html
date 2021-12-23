@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="../css/GioHangg.css">
     <link rel="stylesheet" href="../css/Page.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
-    <script src="../javascript/GioHang.js" defer></script>  
+    <script src="../javascript/angular.js"></script> 
+    <script src="../javascript/GioHang.js"></script>  
+    
 </head>
-<body>
+<body> 
     <div class="page">
         <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe> 
         <main class="body">                      
-            <div class="cart-container">
+            <div class="cart-container"  ng-app="BestsellerApp" ng-controller="BestsellerProduct">
                 <div class="cart__header">
                     <h1>Giỏ hàng</h1>
-                    <h4>Tổng: 1 Sản phẩm</h4>
+                    <!-- <h4>Tổng: 1 Sản phẩm</h4> -->
                 </div>
                 <div class="cart__table">
                     <table border="1">
                         <thead>
                             <tr>
-                                <th>Mã sản phẩm</th>
+                                <th>Số thứ tự</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Số lượng</th>
                                 <th>Giá</th>
@@ -32,30 +34,26 @@
                             </tr>
                         </thead>                
                         <tbody class="sanpham">
-                            <tr>
-                                <td data-label="Mã sản phẩm">1</td >
-                                <td  data-label="Tên sản phẩm">Cà Phê hòa tan 3in1 đạm vị cà phê Nescafé Túi 782g</td>
-                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item1" onchange="Gia1()"></td >
+                            <tr ng-repeat= "p in ProductBuyed" ng-init="p.Soluong=1">
+                                <td data-label="Số thứ tự">{{$index+1}}</td >
+                                <td  data-label="Tên sản phẩm" ng-bind="p.Ten"></td>
+                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item1" ng-model="p.Soluong" onchange="Gia1()"></td >
                                 <td  data-label="Giá">
-                                    <div>
-                                        99,000 
+                                    <div ng-bind="p.Gia|currency:'đ':false">                                        
                                     </div>
                                 </td>
-                                <td>
-                                    <div>
-                                        <input class="input-quantity" type="text" id="checkbox1">
-                                    </div>
-                                </td>
-                                <td  data-label="Chọn"><input type="checkbox" name="chon" value="" id="kq1"></td>                                 
+                                <td ng-bind="p.Soluong*p.Gia|currency:'đ':false"></td>                                                                  
+                                <td  data-label="Chọn"><input type="checkbox"  name="chon" value="" id="kq1"></td>                                 
                             </tr>     
-                            <tr>
+                          
+                            <!-- <tr>
                                 <td data-label="Mã sản phẩm">2</td >
                                 <td  data-label="Tên sản phẩm">Bánh quy AFC vị rau củ hộp 200g</td>
                                 <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item2" onchange="Gia2()"></td >
                                 <td  data-label="Giá">
                                     <div>
                                         40,000
-                                    </div>
+                                    </div> 
                                 </td>
                                 <td>
                                     <div>
@@ -63,14 +61,14 @@
                                     </div>
                                 </td>
                                 <td  data-label="Chọn"><input type="checkbox" name="chon" value="" id="kq2"></td>                                 
-                            </tr>              
+                            </tr>               -->
                         </tbody>
                     </table>
                 </div>
                 <div class="cart__sum">
                     <!-- <input type="button" value="Tổng cộng" id="btn"> -->
-                   <div id="btn">Tổng cổng</div>
-                    <div  id="Total"></div>          
+                   <div id="btn">Tổng cộng</div>
+                    <div  id="Total">{{GetAmount()}}</div>          
                 </div>        
                 <div class="cart-btn">
                     <div class="cart-btn__row1">
