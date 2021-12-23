@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="./css/Page.css">  
     <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">     
     <script src="./javascript/TrangChu.js" defer></script> 
-    <script src="./javascript/angular.js"></script>    
-        
+    <script src="./javascript/angular.js"></script>            
 </head>
-<body ng-app="BestsellerApp">
+<body ng-app="HomeApp">
     <div class="page">
             <iframe class="iframe-header" src="./html/Header.html"  frameborder="0"></iframe>  
         <main class="body">
@@ -52,342 +51,46 @@
                     <img src="./Hinh/HinhTrangChu/Banner/Banner2.jpg" alt="">
                 </div>
             </div>
-            <div class="bestseller" ng-controller="BestsellerProduct">             
-                <div class="bestseller-meta">
-                    <div ng-click="lick()" ng-init="a=window.innerWidt">{{number}}</div>
+            <div class="bestseller" ng-controller="ProductController">             
+                <div class="bestseller-meta">                   
                     <h2> BÁN CHẠY NHẤT</h2>
                 </div>    
                 <div class="bestseller-list">
-                    <div class="product-item" ng-repeat = "p in BestSellerList| limitTo:number" ng-init =" ima = './Hinh/HinhTrangChu/SanPhamTrangChu/'+p.Hinh" ng-if = "p.Loai == 'BCN'" ng-style="{'display': 'block'}">                        
+                    <div class="product-item" ng-repeat = "bestProduct in ListProduct" ng-init =" ima = './Hinh/HinhTrangChu/SanPhamTrangChu/'+ bestProduct.Hinh" ng-if = "bestProduct.Loai == 'BCN'">                        
                         <div class="bestnew-product-img">
-                            <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}"><img src={{ima}} alt=""></a>
+                            <a href="/html/SpChiTiet.html?productID={{bestProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{bestProduct.Hinh}}"><img src={{ima}} alt=""></a>
                         </div>
                         <div class="bestnew-product-info">
                             <div class="name">
-                                <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}" class="product-name">{{BestSellerList[1].Ten}}</a>
+                                <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}" class="product-name">{{bestProduct.Ten}}</a>
                             </div>
                             <div class="product-price">
-                                {{p.Gia|currency:'đ':false}} 
+                                {{bestProduct.Gia|currency:'đ':false}} 
                             </div>
                         </div>
-                    </div>
-                    <script defer> 
-                        var c =Array.from(document.querySelectorAll(".product-item")).length
-                        console.log(c)
-                    </script>
-                    <!-- <div class="product-item-2">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglansua.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông Lan Hura vị Kem Sữa</a>
-                            </div>
-                            <div class="product-price">
-                                262,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-3">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/kdc.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Quy Mặn AFC Hương vị Rau Củ Hộp 200g </a>
-                            </div>
-                            <div class="product-price">
-                                40,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-4">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/Gouteme.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Goute Mè Giòn Tan Orion Hộp 288g</a>
-                            </div>
-                            <div class="product-price">
-                                65,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-5">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/AFChu.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông lan vị cam Fressh Berry</a>
-                            </div>
-                            <div class="product-price">
-                                50,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-6">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglantrung.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông lan nhân Trứng sữa Custas</a>
-                            </div>
-                            <div class="product-price">
-                                50,000đ
-                            </div>
-                        </div>                       
-                    </div>                                                    -->
+                    </div>                                                                   
                 </div>
             </div>   
-
-            <div class="more-bestproduct more-product">
-                <label id="chk-bestmore">More...</label>                         
-            </div>
-    
                        
             <iframe class="iframe-policy" src="./html/ChinhSach.html" frameborder="0"></iframe>
             <div class="newproduct">
                 <div class="newproduct-meta">
                     <h2>SẢN PHẨM MỚI</h2>
                 </div>
-                <div class="newproduct-list">
-                    <div class="product-item-1">
+                <div class="newproduct-list" ng-controller="ProductController">                 
+                    <div class="product-item" ng-repeat = "newProduct in ListProduct" ng-init =" imag = './Hinh/HinhTrangChu/SanPhamTrangChu/'+ newProduct.Hinh" ng-if = "newProduct.Loai == 'SPM'">
                         <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/boanisa.jpg" alt=""> </a>
+                            <a href="/html/SpChiTiet.html?productID={{newProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{newProduct.Hinh}}"><img src={{imag}} alt=""> </a>
                         </div>
                         <div class="bestnew-product-info">
                             <div class="name">
-                                <a href="" class="product-name"> Bánh Quy bơ Danisa hộp 200g </a>
+                                <a href="" class="product-name">{{newProduct.Ten}}</a>
                             </div>
                             <div class="product-price">
-                                65,000đ
+                                {{newProduct.Gia|currency:'đ':false}}
                             </div>
                         </div>
-                    </div>
-                    <div class="product-item-2">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglanHura.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông Lan Hura vị kem sữa</a>
-                            </div>
-                            <div class="product-price">
-                                262,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-3">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/snackphomai.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Snack Mỳ Phô Mai Vifon Gói 40g</a>
-                            </div>
-                            <div class="product-price">
-                                8,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-4">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/banhquegap.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Que Gap Hương Vị Socola Hộp 40g </a>
-                            </div>
-                            <div class="product-price">
-                                20,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-5">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglansolit.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông lan nhân trứng sữa Solite</a>
-                            </div>
-                            <div class="product-price">
-                                50,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-6">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglancutas.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh Bông lan nhân trứng sữa Custas</a>
-                            </div>
-                            <div class="product-price">
-                                50,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-7">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bobanhajino.jfif" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bột bánh rán Ajinomoto vị truyền thống gói 200g</a>
-                            </div>
-                            <div class="product-price">
-                                19,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-8">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/sukem.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Bột vỏ bánh su kem Mikko hộp 200g</a>
-                            </div>
-                            <div class="product-price">
-                                20,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-9">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/caphekopi.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Kẹo cà phê KOPIKO hũ 600g </a>
-                            </div>
-                            <div class="product-price">
-                                69,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-10">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/bonglannuong.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bánh bông lan nướng gói 500g </a>
-                            </div>
-                            <div class="product-price">
-                                35,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-11">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/banhrankoli.png" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Bột bánh rán vị socola Dali Food gói 200g</a>
-                            </div>
-                            <div class="product-price">
-                                18,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-12">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/keosolo.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Kẹo dẻo hương vải Play More Lychee gói 50g</a>
-                            </div>
-                            <div class="product-price">
-                                19,00đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-13">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/metama.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Kẹo me Tamarin gói 135g </a>
-                            </div>
-                            <div class="product-price">
-                                14,700đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-14">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/memsugus.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Kẹo mềm hương cam Sugus thanh 30g </a>
-                            </div>
-                            <div class="product-price">
-                                5,100đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-15">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/suongsam.jfif" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Bột sương sâm 3k hộp 30g</a>
-                            </div>
-                            <div class="product-price">
-                                21,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-16">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/fanta.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name"> Fanta hương soda kem trái cây 1.5 lít</a>
-                            </div>
-                            <div class="product-price">
-                                20,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-17">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/fantalon.jpg" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Fanta hương soda kem trái cây 1.5 lít</a>
-                            </div>
-                            <div class="product-price">
-                                20,000đ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-18">
-                        <div class="bestnew-product-img">
-                            <a href=""><img src="./Hinh/HinhTrangChu/SanPhamTrangChu/xoainuoc.jfif" alt=""> </a>
-                        </div>
-                        <div class="bestnew-product-info">
-                            <div class="name">
-                                <a href="" class="product-name">Thùng 24 lon nước Enegy Mango vị xoài 355ml</a>
-                            </div>
-                            <div class="product-price">
-                                696,000đ
-                            </div>
-                        </div>
-                    </div>                    
+                    </div>                   
                 </div>
                 <div class="more-newproduct more-product">
                     <label id="chk-newmore">More...</label>                         

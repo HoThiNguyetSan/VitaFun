@@ -16,10 +16,10 @@
     <div class="page">
         <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe> 
         <main class="body">                      
-            <div class="cart-container"  ng-app="BestsellerApp" ng-controller="BestsellerProduct">
+            <div class="cart-container"  ng-app="CartApp" ng-controller="CartrProduct">
                 <div class="cart__header">
                     <h1>Giỏ hàng</h1>
-                    <!-- <h4>Tổng: 1 Sản phẩm</h4> -->
+                    <!-- <h4>Tổng: {{getmount()}} Sản phẩm</h4> -->
                 </div>
                 <div class="cart__table">
                     <table border="1">
@@ -36,39 +36,22 @@
                         <tbody class="sanpham">
                             <tr ng-repeat= "p in ProductBuyed" ng-init="p.Soluong=1">
                                 <td data-label="Số thứ tự">{{$index+1}}</td >
-                                <td  data-label="Tên sản phẩm" ng-bind="p.Ten"></td>
-                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item1" ng-model="p.Soluong" onchange="Gia1()"></td >
-                                <td  data-label="Giá">
+                                <td data-label="Tên sản phẩm" ng-bind="p.Ten" id="Namee"></td>
+                                <td data-label="Số lượng" class="input-quantity"><input class="input-quantity-item" type="number" ng-model="p.Soluong"></td >
+                                <td data-label="Giá">
                                     <div ng-bind="p.Gia|currency:'đ':false">                                        
                                     </div>
                                 </td>
                                 <td ng-bind="p.Soluong*p.Gia|currency:'đ':false"></td>                                                                  
-                                <td  data-label="Chọn"><input type="checkbox"  name="chon" value="" id="kq1"></td>                                 
-                            </tr>     
-                          
-                            <!-- <tr>
-                                <td data-label="Mã sản phẩm">2</td >
-                                <td  data-label="Tên sản phẩm">Bánh quy AFC vị rau củ hộp 200g</td>
-                                <td  data-label="Số lượng"><input class="input-quantity" type="number" id="item2" onchange="Gia2()"></td >
-                                <td  data-label="Giá">
-                                    <div>
-                                        40,000
-                                    </div> 
-                                </td>
-                                <td>
-                                    <div>
-                                        <input class="input-quantity" type="text" id="checkbox2">
-                                    </div>
-                                </td>
-                                <td  data-label="Chọn"><input type="checkbox" name="chon" value="" id="kq2"></td>                                 
-                            </tr>               -->
+                                <td  data-label="Chọn"><input type="checkbox" ng-model="p.buy"></td>                                 
+                            </tr>                              
+                           
                         </tbody>
                     </table>
                 </div>
-                <div class="cart__sum">
-                    <!-- <input type="button" value="Tổng cộng" id="btn"> -->
-                   <div id="btn">Tổng cộng</div>
-                    <div  id="Total">{{GetAmount()}}</div>          
+                <div class="cart__sum">                  
+                   <div>Tổng cộng</div>
+                    <div>{{getAmount()}}đ</div>          
                 </div>        
                 <div class="cart-btn">
                     <div class="cart-btn__row1">
