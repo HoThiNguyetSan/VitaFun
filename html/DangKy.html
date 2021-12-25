@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/Dangky.css">
    <link rel="stylesheet" href="../css/Page.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="../javascript/DangKy.js" defer></script>
 </head>
 <body>
     <div class="page">    
@@ -16,25 +17,25 @@
             <div class="register-container">
                 <h1>TẠO TÀI KHOẢN</h1>
                 <div class="register-form__row fullname">
-                    <div>
+                    <div class="name">
                         <label for="first">Tên:<span>* </span></label>
-                        <input type="text" id="first">
+                        <input type="text" id="first" required>
                     </div>
-                    <div>
+                    <div class="name">
                         <label for="last">Họ:<span>* </span></label>
-                        <input type="text" id="last">
-                    </div>
+                        <input type="text" id="last" required>
+                    </div> 
                 </div>
                 <div class="register-form__row">
-                    <label for="pnb">Số điện thoại:<span>* </span></label> <br>
-                    <input type="text" id="pnb">
+                    <label for="pnb" id="nameLogin">Số điện thoại:</label><span>* </span> <br>
+                    <input type="text" id="pnb" required>
                 </div>
                 <div class="register-form__row">
                     <label for="pwd">Mật khẩu:<span>* </span></label> <br>
-                    <input type="text" id="pwd">
+                    <input type="password" id="pwd" required>
                 </div>
-                <div class="register-form__row showpwd">        
-                    <input type="checkbox"> Hiện mật khẩu
+                <div class="register-form__row showpwd">                                      
+                    <input type="checkbox" id="show-pwd"> Hiện mật khẩu
                 </div>
                 <div class="register-form__row btn">
                     <input type="button" id="actregis" value="Đăng Ký"> 

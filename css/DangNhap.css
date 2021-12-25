@@ -28,12 +28,12 @@
 .login-form__row{
     margin-bottom: 10px;      
 }
-.login input[type=text],
+.login input[type=text],.login input[type=password],.login input[type=email],
 .login input[type=button]{
     width: 80%;
     height: 45px;    
     font-size: 20px;
-    padding-left: 20px;    
+    padding-left: 10px;    
 }
 .login .checkpass{
     text-align: left;
@@ -41,6 +41,8 @@
 }
 hr{
     width: 70%;
+    margin: auto;
+    margin-bottom: 5px;
 }
 .login-form__row input[type=button],.login-infor{
     background-color: #F0895D;
@@ -69,10 +71,12 @@ hr{
     box-sizing: border-box;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    
 }
 .login-infor p{     
     font-size: 18px;
     line-height: 20px;
+    margin-bottom: 20px;
 }
 .login-infor__form input{
     background-color: white;
@@ -83,7 +87,7 @@ hr{
     font-size: 20px;    
     border-radius: 20px;        
 }
-.login input[type=button]:hover{
+.login input[type=button]:hover,.image span:hover{
     cursor: pointer;
 }
 

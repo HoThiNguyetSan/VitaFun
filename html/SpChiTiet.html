@@ -9,103 +9,95 @@
     <!-- <link rel="stylesheet" href="../css/keo.css"> -->
     <link rel="stylesheet" href="../css/Page.css">
     <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="../javascript/SpChiTiet.js" defer></script>
+    <script src="../javascript/angular.js"></script>
+    <script>
+        var urlparams = new URLSearchParams(location.search)
+        var id = urlparams.get("productID")
+        var img = urlparams.get("hinh")
+    </script>
+    <script> 
+        let app = angular.module("angularApp", []);
+        app.controller("DetailController", function($scope, $http){
+            $http({
+                method: "GET",
+                url:"../Data/Products.json"
+            })
+            .then(
+                function success(response){      
+                    $scope.SameProduct = response.data                       
+                    $scope.selectedProduct = response.data.find(function(value){
+                        return value.ID == id;                        
+                    })
+                    $scope.a = $scope.selectedProduct.Hinh  
+                },
+                    function error(reponse){                   
+                        $scope.error = reponse.statusText
+                    })    
+                    $scope.ketQua = function(x){if(x < 5){
+                        return true
+                    }}
+                    $scope.hinh = img      
+        })            
+       
+    </script>
 </head>
-<body>
-    <div class="page">
+<body> 
+<div class="page" >
 
- <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe> 
-
-<main class="body">
-
-        <div class="body-productDetail">
+    <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe>
+    <main class="body" >
+        <div class="body-productDetail" ng-app="angularApp" ng-controller="DetailController" >
             <div class="introProduct">
-             <div class="introProduct-intro"> 
-                    <div class="product__img"><img src="../Hinh/HinhspChiTiet/ChocoPie(57k).jpg" alt=""></div>
-        
-                   <div class="product__info">
-                    <div class="product__info--name">
-                       <h2> Bánh ChocoPie hộp 12 cái (360g)</h2>
-                       <p><b>30</b> đã bán | <b> <a href="#">3</a> </b> đánh giá</p>
-                           </div>
-                    <div class="product__info--price">40,000 ₫ &nbsp <span class="price--before">53,000 ₫</span>
-                        <p class="priceNote" >Sản phẩm flash sale</p>
-                    </div>
-                    <div class="product__info--amount">Số lượng : <button type="submit" id="upraise" onclick="soluong(upraise)">-</button>|<input type="text" id="amount" value="1" size="24" required min="1" onchange="soluong(dieukien)">|<button type="submit" id="raise" onclick="soluong(raise)">+</button></div>
-                  </div>
-        
+                <div class="introProduct-intro"> 
+                    <div class="product__img"><img src="{{hinh}}" alt=""></div>        
+                    <div class="product__info">               
+                        <div>
+                            <div class="product__info--name">
+                                <h2> {{selectedProduct.Ten}}</h2>
+                                <p><b>30</b> đã bán | <b> <a href="#">3</a> </b> đánh giá</p>
+                            </div>
+                        </div>                       
+                        <div class="product__info--price">{{selectedProduct.Gia|currency:'đ':false}}  &nbsp 
+                            <span class="price--before">{{selectedProduct.Gia*1.5|currency:'đ':false}}</span>                                                         
+                            <p class="priceNote" >Sản phẩm flash sale</p>
+                        </div>
+                         <div class="product__info--amount">Số lượng : 
+                                <button type="submit" id="upraise" onclick="soluong(upraise)">-</button>|<input type="text" id="amount" value="1" size="24" required min="1" onchange="soluong(dieukien)">|<button type="submit" id="raise" onclick="soluong(raise)">+</button>
+                        </div>
+                    </div>        
                 </div> 
         
                 <div class="introProduct-submit">
                     <!-- <input type="submit" id="" value="Thêm vào giỏ" >
-                <input type="submit" id="" value="Mua ngay"> -->
-                <button type="submit" onclick="themvaogio()"><a href="">Thêm vào giỏ</a></button>
-                <button type="submit"><a href="../html/GioHang.html">Mua ngay</a></button>
-                </div>
-            
-            </div>
-        
-        
-        
+                    <input type="submit" id="" value="Mua ngay"> -->
+                    <button type="submit" onclick="themvaogio()"><a href="">Thêm vào giỏ</a></button>
+                    <button type="submit"><a href="../html/GioHang.html">Mua ngay</a></button>
+                </div>            
+            </div>                       
             <div class="productDescription">
-                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <h2>MÔ TẢ SẢN PHẨM</h2> <br>
                 <hr>
-                <p>
-        
-                    *  * *  Bánh Chocopie Hộp 12 cái là sản phẩm bánh cao cấp của thương hiệu Orion từ lâu đã được đông đảo người tiêu dùng yêu thích. <br>
-                    -   Sản phẩm làm từ các thành phần tự nhiên như: bột mì, đường glucose, chất  béo thực vật, bột cacao, lúa mì, bột vani, marshmallow… mang đến hương vị bánh thơm ngon, hấp dẫn. <br>
-                    -   Khi thưởng thức, bạn sẽ được trải nghiệm hương vị tuyệt vời từ lớp bánh xốp mịn với sô cô la chảy ngọt ngào bên ngoài đến lớp nhân marshmallow dẻo dai, hấp dẫn bên trong. Thành phần có trong bánh giúp bạn bổ sung các vitamin và khoáng chất cần thiết cho cơ thể mỗi ngày. <br>
-                    -   Bánh được đóng hộp sẵn với từng gói bánh nhỏ, phù hợp làm đồ ăn vặt mỗi ngày, dễ dàng mang theo đến trường, lớp, cơ quan làm việc hay những chuyến du lịch, dã ngoại cùng bạn bè, người thân. <br>
-                    -   Sản phẩm được sản xuất trên dây chuyền hiện đại đảm bảo không sử dụng chất tạo màu nhân tạo, chất bảo quản.
-                    
+                <p>       
+                    {{selectedProduct.Mota}}
                 </p>
-            </div>
-        
+            </div>        
             <div class="productSame">
                <div><h3>SẢN PHẨM TƯƠNG TỰ</h3></div> 
-                <div class="productSame-row" >
-                    <div class="productSame-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie cacao(57k).jpg" alt=""></a>
-                     </div>
-                    
-                        <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Cacao Lotte Hộp 336g </a></div>
-                        <div class="product__info--price">57,000 ₫</div>
-                  
-                    </div>
-                    <div class="productSame-row__item">
-                        <div class="product__img">
-                            <a href="#"><img  src="../Hinh/HinhspChiTiet/ChocoPie chuối (57k).jpg" alt=""></a>
-                        </div>
-                       
-                            <div class="product__info--name"><a href="#">Bánh Choco Pie Hương Vị Chuối Lotte Hộp 336g</a></div>
-                            <div class="product__info--price">57,000 ₫</div>
+                <div class="productSame-row" ng-init="i=0">
+                    <div class="productSame-row__item" ng-repeat="p in SameProduct" ng-if = "p.Loai == selectedProduct.Loai && ketQua(p.STT)" ng-init="imag = '../Hinh/HinhspChiTiet/'+ p.Hinh|limitTo:4;in+1">                     
                         
-                   </div>
-                   <div class="productSame-row__item">
-                    <div class="product__img">
-                        <a href="#"><img  src="../Hinh/HinhspChiTiet/AFC rau củ(42k).jpg" alt=""></a>
-                    </div>
-                 
-                        <div class="product__info--name"><a href="#">Bánh Quy Mặn AFC Vị Rau Củ Hộp 200g</a></div>
-                        <div class="product__info--price">40,000 ₫</div>
-                    
-               </div>
-               <div class="productSame-row__item">
-                <div class="product__img">
-                    <a href="#"><img  src="../Hinh/HinhspChiTiet/bánh mè Goute(65k).jpg" alt=""></a>
-                </div>
-                    <div class="product__info--name"><a href="#">Bánh Goute Mè Giòn Tan Orion Hộp 288g</a></div>
-                    <div class="product__info--price">65,000 ₫</div>
-                
-                </div>
-        
-              </div>
-               <script src="../javascript/SpChiTiet.js"></script>
-    </div>
-    <iframe class="iframe-policy" src="./ChinhSach.html" frameborder="0"></iframe>
-    <iframe class="iframe-branch" src="./NhanHieu.html" frameborder="0"></iframe>
-</main>
-
+                        <div class="product__img">
+                            <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhspChiTiet/{{p.Hinh}}"><img  src={{imag}} alt=""></a>
+                        </div>                    
+                        <div class="product__info--name"><a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhspChiTiet/{{p.Hinh}}">{{p.Ten}}</a></div>
+                        <div class="product__info--price">{{p.Gia|currency:'đ':false}}</div>                  
+                    </div>                          
+              </div>               
+        </div>    
+        <iframe class="iframe-policy" src="./ChinhSach.html" frameborder="0"></iframe>
+        <iframe class="iframe-branch" src="./NhanHieu.html" frameborder="0"></iframe>
+    </main>
         <iframe class="iframe-footer" src="./Footer.html" frameborder="0"></iframe>  
     </div>
 </body>

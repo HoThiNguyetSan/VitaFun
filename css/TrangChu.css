@@ -1,28 +1,25 @@
 :root{
-    --commonwidth:1150px ;
     --collumn:6;
-    --commondirection:row;
     --spacing:-2px;
     --rong:1000px;
     --commonheight:364px;  
 }
-a{
-    text-decoration: none;
-    color: black;
+.body{
+    display:flex;
+    flex-direction: column;
 }
-
 /* ---category---------------- */
 .body-menu-banner{
-    max-width: var(--commonwidth);
+    max-width: 100%;
     display: flex;
     flex-direction: var(--commondirection);
-    /* margin-left: -8px;     */
-    margin: 20px auto;       
+    margin-left: 14px;    
+    margin: 20px auto;
+    height: 407px;       
 }
 .body__menu,.home-body__baner1,.home-body__baner2{
-    max-height: 407px;
-    background-color: white(103, 104, 47);
-    margin-left: 14px;    
+    margin-left: 14px; 
+    height: 100%;   
 }
 .body__menu{
     width: 271px;    
@@ -34,20 +31,19 @@ a{
 }
 .home-body__baner2{
     width: 276px;
+
 }
 .home-body__baner1 img,.home-body__baner2 img{
     width: 100%;
     height: 100%;
 }
 .body__menu--tittle,.body__menu--detail div{    
-    height:calc(calc(407px/6)-1px);
-    /* width: 270px; */
+    /* height:calc(calc(407px/6)-1px); */
     width: 100%;
     list-style-type: none;
     font-size: 18px;
     background-color: black;       
     color:white;
-    width: 100%;
     margin-bottom: 1px;
     line-height: 58px;
     padding-left: 10px;  
@@ -68,8 +64,7 @@ a{
 /* -------best seller--------newproduct */
 .bestseller,.newproduct{   
     max-width:var(--commonwidth);       
-    margin: auto;
-    margin-bottom: 20px;    
+    margin: 20px auto;  
 }
 .bestseller-meta,.bestseller-list,.newproduct-meta,.newproduct-list{
     width: 100%;    
@@ -109,6 +104,9 @@ a{
     margin-left: 3px;
     box-sizing: border-box;
 }
+.bestseller-meta h2,.newproduct-meta{
+    line-height: 40px;
+}
 .bestnew-product-info .name{
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -129,10 +127,9 @@ a{
 }
 .bestnew-product-img,
 .bestseller-list img,.newproduct-list img{
+    padding: 5px;
     width: 100%;
-}
-.more-product{
-    display: none;
+    height: auto;
 }
 #toggle-baner{
     display: none;  
@@ -150,7 +147,7 @@ a{
     height: 20px;
 }  
 /* responsive */
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:769px) {
     :root{
         --collumn:3;               
     }  
@@ -159,37 +156,50 @@ a{
     }
     .apreassurances-item{
         width: 48%;
-    }             
+    }            
+    .body-menu-banner{
+     max-height: 274px;   
+    }
     /* --Danh mục-------------- */
     .home-body__baner2{
         display: none;
     }
+    .body__menu{
+        width: 199px;
+    }
+    .body__menu--tittle,.body__menu--detail div{
+        font-size: 14px;
+        line-height: 39px;
+    }
 }
-@media  screen and (max-width:376px) {   
+
+@media  screen and (max-width:425px) {   
     :root{
         --collumn:1;      
         --commondirection:column;       
-    }     
-    .body::before {        
-        height: 90px;        
-    }    
+    }  
     .bestseller-list>div img,.newproduct-list>div img{
         flex: 1;
     }
     .apreassurances-item{
         display: none;
     }
-    .bestseller-list{
+
+    .more-product{
+        display: block;
+    }
+    
+    /* .bestseller-list{
         height:calc(var(--commonheight)*2);
         overflow: hidden;
-    }
-    .newproduct-list{
+    } */
+    /* .newproduct-list{
         height:calc(var(--commonheight)*3);
         overflow: hidden;
-    }
-    .bestseller-list .product-item-3,.bestseller-list .product-item-4,.bestseller-list .product-item-5,.bestseller-list .product-item-6{
+    } */
+    /* .bestseller-list .product-item-3,.bestseller-list .product-item-4,.bestseller-list .product-item-5,.bestseller-list .product-item-6{
        display: none;
-    }      
+    }       */
 
     .bestseller-list>div,.newproduct-list>div{
         padding: 0px 5%;
@@ -202,7 +212,16 @@ a{
         box-sizing: border-box;
         width: 90%;
     }
-    
+
+
+    /* .body-menu-banner */
+    .body-menu-banner{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+
      /* --Danh mục-------------- */
     input#chk-banner:checked + .body__menu--detail{
         display: block;
@@ -213,18 +232,19 @@ a{
     .home-body__baner1{
         display: block;
         width: 100%;
-        margin: auto;
-    }    
+        height: auto;
+        margin: 5px auto;
+    }  
     .body-menu-banner>div:first-child:active .body__menu--detail{
         display: block;
     }   
     .body__menu{
         width: 100%;
+        height: auto;
     }
     .body__menu--tittle:visited .body__menu--detail{
         display: block;
     }   
-    
 }
 
 

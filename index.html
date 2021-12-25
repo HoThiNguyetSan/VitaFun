@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="./css/TrangChu.css">
+    <link rel="stylesheet" href="./css/Page.css">  
+    <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">     
+    <script src="./javascript/TrangChu.js" defer></script> 
+    <script src="./javascript/angular.js"></script>            
+</head>
+<body ng-app="HomeApp">
+    <div class="page">
+            <iframe class="iframe-header" src="./html/Header.html"  frameborder="0"></iframe>  
+        <main class="body">
+            <div class="body-menu-banner">
+                <div class="body__menu">                  
+                    <div class="body__menu--tittle" id="menu-tittle--color">
+                        <label for="chk-banner"><i class="fas fa-bars"></i> Danh mục</label>                         
+                    </div>
+                    <input type="checkbox" id="chk-banner" style="display: none;">
+                    <div class="body__menu--detail">                        
+                        <a href="./html/TrangBanh.html" target="_top">
+                            <div>Bánh</div>
+                        </a>
+                        <a href="./html/TrangKeo.html" target="_top">
+                            <div>Kẹo</div>
+                        </a>
+                        <a href="./html/TrangSnack.html" target="_top">
+                            <div>Snacks</div>
+                        </a>
+                        <a href="./html/trangNuoc.html" target="_top">
+                            <div>Nước ngọt</div>
+                        </a>
+                        <a href="./html/TrangBot.html" target="_top">
+                            <div>Bột làm bánh</div>
+                        </a>
+                        <a href="">
+                            <div>-</div>
+                        </a>
+                    </div>                                                   
+                </div>
+                <div class="home-body__baner1">
+                    <img src="./Hinh/HinhTrangChu/Banner/banner-trang-chu-1.png" alt="">
+                </div>
+                <div class="home-body__baner2">
+                    <img src="./Hinh/HinhTrangChu/Banner/banner-trang-chu-2.png" alt="">
+                </div>
+            </div>
+            <div class="bestseller" ng-controller="ProductController">             
+                <div class="bestseller-meta">                   
+                    <h2> BÁN CHẠY NHẤT</h2>
+                </div>    
+                <div class="bestseller-list">
+                    <div class="product-item" ng-repeat = "bestProduct in ListProduct" ng-init =" ima = './Hinh/HinhTrangChu/SanPhamTrangChu/'+ bestProduct.Hinh" ng-if = "bestProduct.Loai == 'BCN'">                        
+                        <div class="bestnew-product-img">
+                            <a href="/html/SpChiTiet.html?productID={{bestProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{bestProduct.Hinh}}"><img src={{ima}} alt=""></a>
+                        </div>
+                        <div class="bestnew-product-info">
+                            <div class="name">
+                                <a href="/html/SpChiTiet.html?productID={{bestProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{bestProduct.Hinh}}" class="product-name">{{bestProduct.Ten}}</a>
+                            </div>
+                            <div class="product-price">                                
+                                {{bestProduct.Gia|currency:'đ':false}} 
+                            </div>
+                        </div>
+                    </div>                                                                   
+                </div>
+            </div>   
+                       
+            <iframe class="iframe-policy" src="./html/ChinhSach.html" frameborder="0"></iframe>
+            <div class="newproduct">
+                <div class="newproduct-meta">
+                    <h2>SẢN PHẨM MỚI</h2>
+                </div>
+                <div class="newproduct-list" ng-controller="ProductController">                 
+                    <div class="product-item" ng-repeat = "newProduct in ListProduct" ng-init =" imag = './Hinh/HinhTrangChu/SanPhamTrangChu/'+ newProduct.Hinh" ng-if = "newProduct.Loai == 'SPM'">
+                        <div class="bestnew-product-img">
+                            <a href="/html/SpChiTiet.html?productID={{newProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{newProduct.Hinh}}"><img src={{imag}} alt=""> </a>
+                        </div> 
+                        <div class="bestnew-product-info">
+                            <div class="name">
+                                <a href="/html/SpChiTiet.html?productID={{newProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{newProduct.Hinh}}" class="product-name">{{newProduct.Ten}}</a>
+                            </div>
+                            <div class="product-price">
+                                {{newProduct.Gia|currency:'đ':false}}
+                            </div>
+                        </div>
+                    </div>                   
+                </div>                        
+            </div>          
+            <iframe class="iframe-branch" src="./html/NhanHieu.html" frameborder="0"></iframe>          
+        </main>        
+        <iframe class="iframe-footer" src="./html/Footer.html" frameborder="0"></iframe>       
+    </div>
+</body>
+</html>
