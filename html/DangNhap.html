@@ -7,29 +7,34 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/DangNhap.css">
     <link rel="stylesheet" href="../css/Page.css">
-    <script src="../javascript/DangNhap.js" defer></script>
+    <script src="../javascript/angular.js"></script>
+    <script src="../javascript/DangNhap.js" defer></script>       
 </head>
 <body>
     <div class="page">
         <iframe class="iframe-header" src="./Header.html"  frameborder="0"></iframe> 
         <main class="body">
-            <div class="login">
+            <div class="login" ng-app="LoginApp" ng-controller="LoginController">
                 <div class="login-form">
                     <div class="login-form__row">
                         <h1>ĐĂNG NHẬP</h1>
                     </div>
                     <div class="login-form__row">
-                        <input type="text"  id="nameLogin" placeholder="Số điện thoại">
+                        <input type="text"  id="nameLogin" placeholder="Số điện thoại" ng-model="Sdt">
                     </div>
                     <div class="login-form__row">
-                        <input type="password"  placeholder="Mật khẩu" id="pwd">
+                        <input type="password"  placeholder="Mật khẩu" id="pwd" ng-model="pwd">
                     </div>
                     <div class="login-form__row checkpass">
                         <input type="checkbox" id="show-pwd"> Hiện mật khẩu
                     </div>
-                    <div class="login-form__row">
-                        <input type="button" value="Đăng nhập">
-                    </div>
+                    <a href={{ur}}>
+                        <div class="login-form__row">
+                            <input type="button" value="Đăng nhập" ng-click="Show(Sdt,pwd)">
+                           
+                        </div>
+                    </a>
+                    
                     <div class="login-form__row">
                     <a href="">Quên mật khẩu?</a> 
                     </div>

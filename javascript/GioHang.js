@@ -9,7 +9,7 @@ app.controller("CartrProduct",function($scope,$http){
         function success(response){
             $scope.ProductBuyed = response.data     
                  
-        },
+        }, 
         function error(response){
             $scope.error = response.statusText
         }
@@ -27,4 +27,4 @@ app.controller("CartrProduct",function($scope,$http){
     
 })
 
-
+document.getElementsByTagName()

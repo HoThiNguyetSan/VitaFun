@@ -45,10 +45,10 @@
                     </div>                                                   
                 </div>
                 <div class="home-body__baner1">
-                    <img src="./Hinh/HinhTrangChu/Banner/banner1.jpg" alt="">
+                    <img src="./Hinh/HinhTrangChu/Banner/banner-trang-chu-1.png" alt="">
                 </div>
                 <div class="home-body__baner2">
-                    <img src="./Hinh/HinhTrangChu/Banner/Banner2.jpg" alt="">
+                    <img src="./Hinh/HinhTrangChu/Banner/banner-trang-chu-2.png" alt="">
                 </div>
             </div>
             <div class="bestseller" ng-controller="ProductController">             
@@ -62,9 +62,9 @@
                         </div>
                         <div class="bestnew-product-info">
                             <div class="name">
-                                <a href="/html/SpChiTiet.html?productID={{p.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{p.Hinh}}" class="product-name">{{bestProduct.Ten}}</a>
+                                <a href="/html/SpChiTiet.html?productID={{bestProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{bestProduct.Hinh}}" class="product-name">{{bestProduct.Ten}}</a>
                             </div>
-                            <div class="product-price">
+                            <div class="product-price">                                
                                 {{bestProduct.Gia|currency:'đ':false}} 
                             </div>
                         </div>
@@ -81,20 +81,17 @@
                     <div class="product-item" ng-repeat = "newProduct in ListProduct" ng-init =" imag = './Hinh/HinhTrangChu/SanPhamTrangChu/'+ newProduct.Hinh" ng-if = "newProduct.Loai == 'SPM'">
                         <div class="bestnew-product-img">
                             <a href="/html/SpChiTiet.html?productID={{newProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{newProduct.Hinh}}"><img src={{imag}} alt=""> </a>
-                        </div>
+                        </div> 
                         <div class="bestnew-product-info">
                             <div class="name">
-                                <a href="" class="product-name">{{newProduct.Ten}}</a>
+                                <a href="/html/SpChiTiet.html?productID={{newProduct.ID}}&hinh=../Hinh/HinhTrangChu/SanPhamTrangChu/{{newProduct.Hinh}}" class="product-name">{{newProduct.Ten}}</a>
                             </div>
                             <div class="product-price">
                                 {{newProduct.Gia|currency:'đ':false}}
                             </div>
                         </div>
                     </div>                   
-                </div>
-                <div class="more-newproduct more-product">
-                    <label id="chk-newmore">More...</label>                         
-                </div>              
+                </div>                        
             </div>          
             <iframe class="iframe-branch" src="./html/NhanHieu.html" frameborder="0"></iframe>          
         </main>        

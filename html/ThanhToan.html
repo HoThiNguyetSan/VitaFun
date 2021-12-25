@@ -54,10 +54,10 @@
                             </div>
                         </div> 
                         
-                        <div class="payment-product-item" ng-repeat="p in ProductPayment"  ng-init="imga='../Hinh/HinhTrangChu/SanPhamTrangChu/'+ p.Hinh;p.Soluong=1">                        
+                        <div class="payment-product-item" ng-repeat="p in ProductPayment"  ng-init="imag='../Hinh/HinhspChiTiet/'+ p.Hinh; p.Soluong=1">                             
                             <div class="payment-product__img">
                                 <input type="button" value="Yêu thích"> <br>
-                                <img src="{{imga}}" alt=""> <br>
+                                <img src={{imag}} alt=""> <br>
                                 <span>{{p.Ten}}</span>
                             </div>                        
                             <div class="payment-product__price">

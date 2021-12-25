@@ -13,6 +13,6 @@ app.controller("ProductController",function($scope,$http){
         function error(response){
             $scope.error = response.statusText
         }
-    );     
+    );      
   
 })  
